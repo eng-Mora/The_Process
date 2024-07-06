@@ -29,15 +29,15 @@
         .container img {
             width: 180px;
             height: auto;
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 20px;
         }
         .container h2, .container h1 {
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 20px;
         }
         .container input {
             width: 100%;
             padding: 12px;
-            margin: 8px 0; /* Reduced margin */
+            margin: 12px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
@@ -63,7 +63,7 @@
             margin-top: 20px;
         }
         .footer-text {
-            margin-top: 10px; /* Reduced margin */
+            margin-top: 20px;
             font-size: 16px;
             color: #888;
         }
@@ -85,6 +85,16 @@
         }
         body.dark-mode .contact-message {
             color: white; /* Color for dark mode */
+        }
+        .contact-message::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: black; /* Default color for light mode */
+            margin: 10px 0;
+        }
+        body.dark-mode .contact-message::after {
+            background-color: white; /* Color for dark mode */
         }
         body.dark-mode {
             background-color: #2c2c2c;
@@ -123,13 +133,13 @@
         .medallion {
             width: 180px;
             height: auto;
-            margin: 0 auto 10px; /* Reduced margin */
+            margin: 0 auto 20px;
             display: block;
         }
         .video-container {
             padding: 56.25% 0 0 0;
             position: relative;
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 20px;
         }
         .video-container iframe {
             position: absolute;
@@ -139,7 +149,7 @@
             height: 100%;
         }
         .video-footer-text {
-            margin-top: 10px; /* Reduced margin */
+            margin-top: 20px;
             font-size: 16px;
             color: #888;
         }
@@ -282,6 +292,7 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
+
         </div>
 
         <!-- Contact Icons -->
