@@ -29,15 +29,15 @@
         .container img {
             width: 180px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin */
         }
         .container h2, .container h1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin */
         }
         .container input {
             width: 100%;
             padding: 12px;
-            margin: 12px 0;
+            margin: 8px 0; /* Reduced margin */
             border: 1px solid #ccc;
             border-radius: 4px;
         }
@@ -63,7 +63,7 @@
             margin-top: 20px;
         }
         .footer-text {
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced margin */
             font-size: 16px;
             color: #888;
         }
@@ -123,13 +123,13 @@
         .medallion {
             width: 180px;
             height: auto;
-            margin: 0 auto 20px;
+            margin: 0 auto 10px; /* Reduced margin */
             display: block;
         }
         .video-container {
             padding: 56.25% 0 0 0;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Reduced margin */
         }
         .video-container iframe {
             position: absolute;
@@ -139,7 +139,7 @@
             height: 100%;
         }
         .video-footer-text {
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced margin */
             font-size: 16px;
             color: #888;
         }
@@ -282,7 +282,6 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
-
         </div>
 
         <!-- Contact Icons -->
@@ -307,4 +306,3 @@
     </div>
 </body>
 </html>
-
