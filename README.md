@@ -212,6 +212,7 @@
         } else {
           activeUsers[username] = true;
           localStorage.setItem('activeUsers', JSON.stringify(activeUsers));
+          localStorage.setItem('currentUsername', username);
           document.getElementById('login-container').classList.add('hidden');
           document.getElementById('video-container').classList.remove('hidden');
 
@@ -248,10 +249,11 @@
     }
 
     function logout() {
-      const username = document.getElementById('username').value.trim();
+      const username = localStorage.getItem('currentUsername');
       if (username && activeUsers[username]) {
         delete activeUsers[username];
         localStorage.setItem('activeUsers', JSON.stringify(activeUsers));
+        localStorage.removeItem('currentUsername');
         document.getElementById('video-container').classList.add('hidden');
         document.getElementById('login-container').classList.remove('hidden');
         document.getElementById('username').value = '';  // Clear the username field
@@ -279,7 +281,7 @@
     });
 
     window.addEventListener('beforeunload', () => {
-      const username = document.getElementById('username').value.trim();
+      const username = localStorage.getItem('currentUsername');
       if (username && activeUsers[username]) {
         localStorage.setItem('currentUsername', username);
       } else {
@@ -291,7 +293,7 @@
 <body>
   <div class="container" id="login-container">
     <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-    <h2>Welcome to the Video Page!</h2>
+    <h2>Login</h2>
     <input type="text" id="username" placeholder="Enter your username" onkeydown="handleEnterKey(event)">
     <button onclick="login()">Login</button>
     <div class="contact-icons">
