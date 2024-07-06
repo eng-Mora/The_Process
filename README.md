@@ -86,16 +86,6 @@
         body.dark-mode .contact-message {
             color: white; /* Color for dark mode */
         }
-        .contact-message::after {
-            content: '';
-            display: block;
-            height: 1px;
-            background-color: black; /* Default color for light mode */
-            margin: 10px 0;
-        }
-        body.dark-mode .contact-message::after {
-            background-color: white; /* Color for dark mode */
-        }
         body.dark-mode {
             background-color: #2c2c2c;
             color: #f0f0f0;
@@ -317,3 +307,4 @@
     </div>
 </body>
 </html>
+
