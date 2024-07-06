@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -195,7 +196,7 @@
     }
   </style>
   <script>
-    let activeUsers = {};
+    let activeUsers = JSON.parse(localStorage.getItem('activeUsers')) || {};
 
     function login() {
       const username = document.getElementById('username').value.trim();
@@ -210,6 +211,7 @@
           alert('This username is already logged in on another device.');
         } else {
           activeUsers[username] = true;
+          localStorage.setItem('activeUsers', JSON.stringify(activeUsers));
           document.getElementById('login-container').classList.add('hidden');
           document.getElementById('video-container').classList.remove('hidden');
 
@@ -235,13 +237,6 @@
       }
     }
 
-    window.addEventListener('beforeunload', function () {
-      const username = document.getElementById('username').value.trim();
-      if (username && activeUsers[username]) {
-        delete activeUsers[username];
-      }
-    });
-
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       const themeSwitch = document.getElementById('theme-switch');
@@ -256,20 +251,49 @@
       const username = document.getElementById('username').value.trim();
       if (username && activeUsers[username]) {
         delete activeUsers[username];
+        localStorage.setItem('activeUsers', JSON.stringify(activeUsers));
         document.getElementById('video-container').classList.add('hidden');
         document.getElementById('login-container').classList.remove('hidden');
         document.getElementById('username').value = '';  // Clear the username field
       }
     }
+
+    window.addEventListener('load', () => {
+      const username = localStorage.getItem('currentUsername');
+      if (username && activeUsers[username]) {
+        document.getElementById('login-container').classList.add('hidden');
+        document.getElementById('video-container').classList.remove('hidden');
+
+        // Set personalized welcome message
+        const welcomeContainer = document.getElementById('welcome-container');
+        if (username === '45455') {
+          welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+        } else if (username === '45454') {
+          welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+        }
+
+        setTimeout(() => {
+          welcomeContainer.classList.add('hidden');
+        }, 7000);
+      }
+    });
+
+    window.addEventListener('beforeunload', () => {
+      const username = document.getElementById('username').value.trim();
+      if (username && activeUsers[username]) {
+        localStorage.setItem('currentUsername', username);
+      } else {
+        localStorage.removeItem('currentUsername');
+      }
+    });
   </script>
 </head>
 <body>
   <div class="container" id="login-container">
-    <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)" aria-label="Username">
-    <button onclick="login()" aria-label="Login">Login</button>
-    <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+    <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+    <h2>Welcome to the Video Page!</h2>
+    <input type="text" id="username" placeholder="Enter your username" onkeydown="handleEnterKey(event)">
+    <button onclick="login()">Login</button>
     <div class="contact-icons">
       <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
