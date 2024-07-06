@@ -241,7 +241,7 @@
 </head>
 <body>
     <div class="container" id="login-container">
-        <img src="[https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png](https://i.ibb.co/197ZhHc/26015241-c430-4b73-926a-4c46642063f0-removebg-1.png)" alt="Medal Image">
+        <img src="https://i.ibb.co/197ZhHc/26015241-c430-4b73-926a-4c46642063f0-removebg-1.png" alt="Medal Image">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
@@ -258,7 +258,7 @@
     </div>
 
     <div class="container hidden" id="video-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+        <img src="https://i.ibb.co/197ZhHc/26015241-c430-4b73-926a-4c46642063f0-removebg-1.png" alt="Medal Image" class="medallion">
         <div id="welcome-container"></div>
         
         <!-- Video Section -->
@@ -307,4 +307,3 @@
     </div>
 </body>
 </html>
-
