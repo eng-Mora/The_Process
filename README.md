@@ -178,6 +178,20 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            .theme-switch-wrapper {
+                top: 10px;
+                right: 10px;
+            }
+            .video-container {
+                padding-top: 56.25%;
+            }
+        }
     </style>
     <script>
         let activeUsers = {};
@@ -193,25 +207,24 @@
             if (username === '45455' || username === '45454') {
                 if (activeUsers[username]) {
                     alert('This username is already logged in on another device.');
+                    return;
                 } else {
                     activeUsers[username] = true;
                     document.getElementById('login-container').classList.add('hidden');
                     document.getElementById('video-container').classList.remove('hidden');
 
-                    // Set personalized welcome message
                     if (username === '45455') {
                         welcomeContainer.textContent = 'Welcome, Teto 🤩!';
                     } else if (username === '45454') {
                         welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
                     }
 
-                    // Show welcome message for 7 seconds then hide it
                     setTimeout(() => {
                         welcomeContainer.classList.add('hidden');
-                    }, 7000);  // Display welcome message for 7 seconds
+                    }, 7000);
                 }
             } else {
-                alert('Invalid username');
+                alert('Invalid username. Please enter a valid username.');
             }
         }
 
@@ -237,14 +250,24 @@
                 themeSwitch.checked = false;
             }
         }
+
+        function logout() {
+            const username = document.getElementById('username').value.trim();
+            if (username && activeUsers[username]) {
+                delete activeUsers[username];
+                document.getElementById('video-container').classList.add('hidden');
+                document.getElementById('login-container').classList.remove('hidden');
+                document.getElementById('username').value = '';  // Clear the username field
+            }
+        }
     </script>
 </head>
 <body>
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
-        <button onclick="login()">Login</button>
+        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)" aria-label="Username">
+        <button onclick="login()" aria-label="Login">Login</button>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
@@ -260,6 +283,7 @@
     <div class="container hidden" id="video-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
         <div id="welcome-container"></div>
+        <button onclick="logout()">Logout</button>
         
         <!-- Video Section -->
         <div class="video-section">
@@ -267,22 +291,18 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
             </div>
-            
             <h1>Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
-            
             <h1>Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
             </div>
-            
             <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
-
         </div>
 
         <!-- Contact Icons -->
@@ -307,4 +327,3 @@
     </div>
 </body>
 </html>
-
