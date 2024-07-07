@@ -12,10 +12,20 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$loginError = '';
+
+// Check if the user is already logged in
+if (isset($_SESSION['username'])) {
+    // User is already logged in, redirect to video page
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Handle login
 if (isset($_POST['login'])) {
     $user = $_POST['username'];
 
-    // Check if the user is already logged in
+    // Check if the user is already logged in on another device
     $sql = "SELECT * FROM sessions WHERE username = ? AND session_id != ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $user, session_id());
@@ -40,6 +50,7 @@ if (isset($_POST['login'])) {
     $stmt->close();
 }
 
+// Handle logout
 if (isset($_POST['logout'])) {
     // Remove the session
     $user = $_SESSION['username'];
@@ -290,12 +301,6 @@ $conn->close();
 
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
-            const themeSwitch = document.getElementById('theme-switch');
-            if (document.body.classList.contains('dark-mode')) {
-                themeSwitch.checked = true;
-            } else {
-                themeSwitch.checked = false;
-            }
         }
     </script>
 </head>
