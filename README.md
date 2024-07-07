@@ -95,11 +95,11 @@ login_page_html = '''
         }
         .contact-message {
             font-size: 18px;
-            color: black; /* Default color for light mode */
+            color: black;
             margin-bottom: 10px;
         }
         body.dark-mode .contact-message {
-            color: white; /* Color for dark mode */
+            color: white;
         }
         body.dark-mode {
             background-color: #2c2c2c;
@@ -134,32 +134,6 @@ login_page_html = '''
         body.dark-mode #welcome-container {
             color: #f0f0f0;
             background-color: rgba(255, 255, 255, 0.3);
-        }
-        .medallion {
-            width: 180px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-        }
-        .video-container {
-            padding: 56.25% 0 0 0;
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .video-footer-text {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #888;
-        }
-        body.dark-mode .video-footer-text {
-            color: #f0f0f0;
         }
 
         .theme-switch-wrapper {
@@ -317,7 +291,6 @@ login_page_html = '''
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
-
         </div>
 
         <!-- Contact Icons -->
@@ -344,11 +317,11 @@ login_page_html = '''
 </html>
 '''
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def home():
     if 'username' in session:
-        return render_template_string(login_page_html, message='')
-    return render_template_string(login_page_html, message='')
+        return render_template_string(login_page_html)
+    return render_template_string(login_page_html)
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -367,9 +340,11 @@ def login():
 
 @app.route('/logout', methods=['POST'])
 def logout():
-    username = session.pop('username', None)
+    data = request.get_json()
+    username = data.get('username')
     if username in active_users:
         active_users.remove(username)
+    session.pop('username', None)
     return jsonify({'success': True})
 
 if __name__ == '__main__':
