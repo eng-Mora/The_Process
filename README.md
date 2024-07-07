@@ -1,7 +1,13 @@
-from flask import Flask, request, redirect, url_for, session, render_template_string
+from flask import Flask, request, redirect, url_for, session, render_template_string, jsonify
+from flask_session import Session
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Needed for session management
+
+# Configure server-side session storage
+app.config['SESSION_TYPE'] = 'filesystem'
+Session(app)
+
 active_users = set()
 
 # HTML content
@@ -191,7 +197,7 @@ login_page_html = '''
     <script>
         let activeUsers = {};
 
-        function login() {
+        async function login() {
             const username = document.getElementById('username').value.trim();
             const welcomeContainer = document.getElementById('welcome-container');
             if (username === '') {
@@ -203,21 +209,34 @@ login_page_html = '''
                 if (activeUsers[username]) {
                     alert('This username is already logged in on another device.');
                 } else {
-                    activeUsers[username] = true;
-                    document.getElementById('login-container').classList.add('hidden');
-                    document.getElementById('video-container').classList.remove('hidden');
+                    const response = await fetch('/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username })
+                    });
 
-                    // Set personalized welcome message
-                    if (username === '45455') {
-                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                    } else if (username === '45454') {
-                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                    const data = await response.json();
+                    if (data.success) {
+                        activeUsers[username] = true;
+                        document.getElementById('login-container').classList.add('hidden');
+                        document.getElementById('video-container').classList.remove('hidden');
+
+                        // Set personalized welcome message
+                        if (username === '45455') {
+                            welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                        } else if (username === '45454') {
+                            welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                        }
+
+                        // Show welcome message for 7 seconds then hide it
+                        setTimeout(() => {
+                            welcomeContainer.classList.add('hidden');
+                        }, 7000);  // Display welcome message for 7 seconds
+                    } else {
+                        alert(data.message);
                     }
-
-                    // Show welcome message for 7 seconds then hide it
-                    setTimeout(() => {
-                        welcomeContainer.classList.add('hidden');
-                    }, 7000);  // Display welcome message for 7 seconds
                 }
             } else {
                 alert('Invalid username');
@@ -230,9 +249,16 @@ login_page_html = '''
             }
         }
 
-        window.addEventListener('beforeunload', function () {
+        window.addEventListener('beforeunload', async function () {
             const username = document.getElementById('username').value.trim();
             if (username && activeUsers[username]) {
+                await fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username })
+                });
                 delete activeUsers[username];
             }
         });
@@ -321,24 +347,30 @@ login_page_html = '''
 @app.route('/', methods=['GET'])
 def home():
     if 'username' in session:
-        return render_template_string(login_page_html, message=f'Hello, {session["username"]}! <a href="/logout">Logout</a>')
+        return render_template_string(login_page_html, message='')
     return render_template_string(login_page_html, message='')
 
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form['username']
-    if username in active_users and username != '45454':
-        return render_template_string(login_page_html, message='Username already logged in.')
+    data = request.get_json()
+    username = data.get('username')
+    
+    if username not in ['45454', '45455']:
+        return jsonify({'success': False, 'message': 'Invalid username'}), 400
+    
+    if username in active_users:
+        return jsonify({'success': False, 'message': 'This username is already logged in on another device.'}), 400
+    
     active_users.add(username)
     session['username'] = username
-    return redirect(url_for('home'))
+    return jsonify({'success': True})
 
-@app.route('/logout')
+@app.route('/logout', methods=['POST'])
 def logout():
     username = session.pop('username', None)
-    if username:
+    if username in active_users:
         active_users.remove(username)
-    return redirect(url_for('home'))
+    return jsonify({'success': True})
 
 if __name__ == '__main__':
     app.run(debug=True)
