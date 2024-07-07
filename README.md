@@ -1,74 +1,3 @@
-<?php
-session_start();
-
-$servername = "localhost";
-$username = "root";  // Change to your database username
-$password = "";      // Change to your database password
-$dbname = "user_login";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$loginError = '';
-
-// Check if the user is already logged in
-if (isset($_SESSION['username'])) {
-    // User is already logged in, redirect to video page
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
-}
-
-// Handle login
-if (isset($_POST['login'])) {
-    $user = $_POST['username'];
-
-    // Check if the user is already logged in on another device
-    $sql = "SELECT * FROM sessions WHERE username = ? AND session_id != ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $user, session_id());
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $loginError = 'This username is already logged in on another device.';
-    } else {
-        // Insert a new session
-        $session_id = session_id();
-        $sql = "INSERT INTO sessions (username, session_id) VALUES (?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ss", $user, $session_id);
-        $stmt->execute();
-
-        $_SESSION['username'] = $user;
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit;
-    }
-
-    $stmt->close();
-}
-
-// Handle logout
-if (isset($_POST['logout'])) {
-    // Remove the session
-    $user = $_SESSION['username'];
-    $sql = "DELETE FROM sessions WHERE username = ? AND session_id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $user, session_id());
-    $stmt->execute();
-
-    session_unset();
-    session_destroy();
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit;
-}
-
-$conn->close();
-?>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -301,20 +230,21 @@ $conn->close();
 
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+            const themeSwitch = document.getElementById('theme-switch');
+            if (document.body.classList.contains('dark-mode')) {
+                themeSwitch.checked = true;
+            } else {
+                themeSwitch.checked = false;
+            }
         }
     </script>
 </head>
 <body>
-    <div class="container <?php if (isset($_SESSION['username'])) echo 'hidden'; ?>" id="login-container">
+    <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
         <h2>Login</h2>
-        <form method="post">
-            <input type="text" id="username" name="username" placeholder="Username" onkeydown="handleEnterKey(event)">
-            <button type="submit" name="login">Login</button>
-        </form>
-        <?php if (isset($loginError)): ?>
-            <p style="color: red;"><?php echo htmlspecialchars($loginError); ?></p>
-        <?php endif; ?>
+        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
+        <button onclick="login()">Login</button>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
@@ -327,7 +257,7 @@ $conn->close();
         <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
-    <div class="container <?php if (!isset($_SESSION['username'])) echo 'hidden'; ?>" id="video-container">
+    <div class="container hidden" id="video-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
         <div id="welcome-container"></div>
         
@@ -352,6 +282,7 @@ $conn->close();
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
+
         </div>
 
         <!-- Contact Icons -->
@@ -365,9 +296,6 @@ $conn->close();
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Mora</p>
-        <form method="post">
-            <button type="submit" name="logout">Logout</button>
-        </form>
     </div>
 
     <div class="theme-switch-wrapper">
@@ -379,3 +307,4 @@ $conn->close();
     </div>
 </body>
 </html>
+
