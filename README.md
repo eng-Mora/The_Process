@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -178,6 +179,15 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
+
+        .time-container {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #888;
+        }
+        body.dark-mode .time-container {
+            color: #f0f0f0;
+        }
     </style>
     <script>
         let activeUsers = {};
@@ -209,6 +219,10 @@
                     setTimeout(() => {
                         welcomeContainer.classList.add('hidden');
                     }, 7000);  // Display welcome message for 7 seconds
+
+                    // Update time every minute
+                    updateTime();
+                    setInterval(updateTime, 60000);
                 }
             } else {
                 alert('Invalid username');
@@ -237,6 +251,18 @@
                 themeSwitch.checked = false;
             }
         }
+
+        function updateTime() {
+            const now = new Date();
+            const options = { timeZone: 'Africa/Cairo', hour: '2-digit', minute: '2-digit' };
+            const timeString = now.toLocaleTimeString('en-GB', options);
+            document.getElementById('time').textContent = `Current Time in Cairo: ${timeString}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            updateTime();
+            setInterval(updateTime, 60000); // Update time every minute
+        });
     </script>
 </head>
 <body>
@@ -255,6 +281,7 @@
             </a>
         </div>
         <p class="footer-text">Developed by Eng: Mora</p>
+        <div id="time" class="time-container"></div>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -281,9 +308,12 @@
             <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
+              </div>
+            
+            <h1>اه يا زمن </h1>
+            <div class="video-container">
+                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
-
-        </div>
 
         <!-- Contact Icons -->
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
@@ -296,6 +326,7 @@
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Mora</p>
+        <div id="time" class="time-container"></div>
     </div>
 
     <div class="theme-switch-wrapper">
@@ -307,4 +338,3 @@
     </div>
 </body>
 </html>
-
