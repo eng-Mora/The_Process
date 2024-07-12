@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -247,27 +246,17 @@
                 themeSwitch.checked = false;
             }
         }
-
-        // Ensure dark mode applies on page load if previously set
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedDarkMode = localStorage.getItem('dark-mode');
-            if (savedDarkMode === 'enabled') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('theme-switch').checked = true;
-            }
-        });
-
-        // Save dark mode preference
-        document.getElementById('theme-switch').addEventListener('change', () => {
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-            }
-        });
     </script>
 </head>
 <body>
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌚</span>
+        </label>
+    </div>
+
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
         <h2>Login</h2>
@@ -282,7 +271,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
         </div>
-        <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -329,12 +317,3 @@
         <p class="video-footer-text">Developed by Eng: Mora</p>
     </div>
 
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-        <label for="theme-switch" class="theme-switch-label">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌚</span>
-        </label>
-    </div>
-</body>
-</html>
