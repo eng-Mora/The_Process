@@ -308,5 +308,3 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
-</body>
-</html>
