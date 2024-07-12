@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -178,6 +179,15 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
+
+        /* Dark Mode Image Overrides */
+        body.dark-mode .container img {
+            content: url('https://i.ibb.co/QFXMf0K/26015241-c430-4b73-926a-4c46642063f0-removebg-1-removebg-preview.png');
+        }
+
+        body.dark-mode .video-container img {
+            content: url('https://i.ibb.co/QFXMf0K/26015241-c430-4b73-926a-4c46642063f0-removebg-1-removebg-preview.png');
+        }
     </style>
     <script>
         let activeUsers = {};
@@ -237,6 +247,24 @@
                 themeSwitch.checked = false;
             }
         }
+
+        // Ensure dark mode applies on page load if previously set
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedDarkMode = localStorage.getItem('dark-mode');
+            if (savedDarkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-switch').checked = true;
+            }
+        });
+
+        // Save dark mode preference
+        document.getElementById('theme-switch').addEventListener('change', () => {
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
     </script>
 </head>
 <body>
@@ -308,3 +336,5 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
+</body>
+</html>
