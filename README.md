@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -178,15 +179,6 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
-
-        /* Dark Mode Image Overrides */
-        body.dark-mode .container img {
-            content: url('https://i.ibb.co/QFXMf0K/26015241-c430-4b73-926a-4c46642063f0-removebg-1-removebg-preview.png');
-        }
-
-        body.dark-mode .video-container img {
-            content: url('https://i.ibb.co/QFXMf0K/26015241-c430-4b73-926a-4c46642063f0-removebg-1-removebg-preview.png');
-        }
     </style>
     <script>
         let activeUsers = {};
@@ -249,14 +241,6 @@
     </script>
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-        <label for="theme-switch" class="theme-switch-label">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌚</span>
-        </label>
-    </div>
-
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
         <h2>Login</h2>
@@ -271,6 +255,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
         </div>
+        <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -297,12 +282,11 @@
             <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
-              </div>
-            
-            <h1>اه يا زمن </h1>
-            <div class="video-container">
-                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
+                                    <h1>اه يا زمن </h1>
+            <div class="video-container">
+                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+        </div>
 
         <!-- Contact Icons -->
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
@@ -316,4 +300,14 @@
         </div>
         <p class="video-footer-text">Developed by Eng: Mora</p>
     </div>
+
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌚</span>
+        </label>
+    </div>
+</body>
+</html>
 
