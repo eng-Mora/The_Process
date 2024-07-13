@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -283,9 +282,10 @@
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
-                                    <h1>اه يا زمن </h1>
+            <h1>اه يا زمن </h1>
             <div class="video-container">
                 <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+            </div>
         </div>
 
         <!-- Contact Icons -->
@@ -308,6 +308,3 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
-</body>
-</html>
-
