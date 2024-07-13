@@ -4,30 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-        /* Reset default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Global Styles */
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
+            padding: 0;
+            transition: background-color 0.5s, color 0.5s;
         }
 
         /* Login Page Styles */
-        .login-container {
+        .login-page {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
+            padding: 20px;
         }
 
-        .login-form {
+        .login-container {
             background-color: white;
             padding: 30px;
             border-radius: 8px;
@@ -35,20 +30,19 @@
             text-align: center;
             width: 100%;
             max-width: 400px;
-            transition: background-color 0.5s, color 0.5s;
         }
 
-        .login-form img {
+        .login-container img {
             width: 180px;
             height: auto;
             margin-bottom: 20px;
         }
 
-        .login-form h2 {
+        .login-container h2 {
             margin-bottom: 20px;
         }
 
-        .login-form input {
+        .login-container input {
             width: 100%;
             padding: 12px;
             margin: 12px 0;
@@ -56,7 +50,7 @@
             border-radius: 4px;
         }
 
-        .login-form button {
+        .login-container button {
             width: 100%;
             padding: 12px;
             background-color: #4CAF50;
@@ -66,143 +60,87 @@
             cursor: pointer;
         }
 
-        .login-form button:hover {
+        .login-container button:hover {
             background-color: #45a049;
         }
 
-        .login-form .contact-message {
+        .login-container .contact-icons {
             margin-top: 20px;
-            font-size: 16px;
-            color: #888;
         }
 
-        .login-form .contact-icons {
-            margin-top: 10px;
-        }
-
-        .login-form .contact-icons a {
+        .login-container .contact-icons a {
             display: inline-block;
             margin: 0 10px;
         }
 
-        .login-form .contact-icons img {
+        .login-container .contact-icons img {
             width: 30px;
             height: 30px;
         }
 
-        .login-form .footer-text {
+        .login-container .footer-text {
             margin-top: 20px;
             font-size: 16px;
             color: #888;
         }
 
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #2c2c2c;
-            color: #f0f0f0;
+        /* Video Page Styles */
+        .video-page {
+            display: none;
+            min-height: 100vh;
         }
 
-        body.dark-mode .login-form {
-            background-color: #3c3c3c;
-            color: #f0f0f0;
-        }
-
-        body.dark-mode .login-form input {
-            background-color: #5c5c5c;
-            color: #f0f0f0;
-            border: 1px solid #7c7c7c;
-        }
-
-        body.dark-mode .login-form button {
-            background-color: #45a049;
-        }
-
-        body.dark-mode .login-form button:hover {
-            background-color: #3a8b3e;
-        }
-
-        body.dark-mode .login-form .contact-message {
-            color: white;
-        }
-
-        body.dark-mode .login-form .contact-icons a {
-            filter: brightness(0.8);
-        }
-
-        body.dark-mode .login-form .footer-text {
-            color: #f0f0f0;
-        }
-
-        /* Header and Navigation Styles */
+        /* Header */
         header {
-            background-color: transparent; /* Make header transparent */
-            color: white;
-            padding: 10px 20px;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            z-index: 1000;
             display: flex;
             align-items: center;
-            z-index: 1000;
         }
 
-        /* Menu Button */
         .menu-button {
-            position: relative;
-        }
-
-        #menu-toggle {
-            background-color: #555;
-            color: white;
+            background: none;
             border: none;
-            padding: 10px 15px;
             cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            font-size: 24px;
         }
 
-        #menu-toggle:hover {
-            background-color: #777;
-        }
-
-        /* Menu Styles */
         .menu-content {
             display: none;
-            background-color: #2c2c2c;
-            color: white;
-            padding: 15px;
             position: absolute;
             top: 50px;
-            left: 20px; /* Menu on the left */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            border-radius: 8px;
+            left: 20px;
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            padding: 10px;
             z-index: 1000;
-            width: 200px;
+        }
+
+        .menu-content a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu-content a:hover {
+            background-color: #f0f0f0;
         }
 
         .menu-content.show {
             display: block;
         }
 
-        .menu-content a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            display: block;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-content a:hover {
-            background-color: #444;
-        }
-
-        /* Main Content Styles */
-        .content {
-            padding: 20px;
-            margin-top: 60px; /* Space for the fixed header */
+        .video-container {
+            padding-top: 60px; /* Adjust for fixed header */
         }
 
         .video-container {
@@ -210,15 +148,25 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 20px auto;
         }
 
-        .video-section {
-            margin-bottom: 30px;
+        .video-container h1 {
+            margin-bottom: 15px;
         }
 
         .video-container iframe {
             width: 100%;
             height: 315px;
+            border: none;
+        }
+
+        .video-footer-text {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #888;
         }
 
         .contact-icons {
@@ -236,49 +184,53 @@
             height: 30px;
         }
 
-        .video-footer-text {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #888;
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: #f0f0f0;
         }
 
-        /* Dark Mode Styles */
+        body.dark-mode .login-container {
+            background-color: #3c3c3c;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .login-container input {
+            background-color: #5c5c5c;
+            color: #f0f0f0;
+            border: 1px solid #7c7c7c;
+        }
+
+        body.dark-mode .login-container button {
+            background-color: #45a049;
+        }
+
+        body.dark-mode .login-container button:hover {
+            background-color: #3a8b3e;
+        }
+
         body.dark-mode .video-container {
             background-color: #3c3c3c;
             color: #f0f0f0;
         }
 
-        body.dark-mode #menu-toggle {
-            background-color: #777;
+        body.dark-mode .video-container h1 {
             color: #f0f0f0;
         }
 
-        body.dark-mode #menu-toggle:hover {
-            background-color: #999;
-        }
-
-        body.dark-mode .menu-content {
-            background-color: #3c3c3c;
-        }
-
-        body.dark-mode .menu-content a {
-            color: #f0f0f0;
-        }
-
-        body.dark-mode .menu-content a:hover {
-            background-color: #555;
-        }
-
-        body.dark-mode .contact-icons a {
-            filter: brightness(0.8);
+        body.dark-mode .video-container iframe {
+            border: 1px solid #555;
         }
 
         body.dark-mode .video-footer-text {
             color: #f0f0f0;
         }
 
-        /* Theme Switch */
+        body.dark-mode .contact-icons a {
+            filter: brightness(0.8);
+        }
+
+        /* Dark Mode Switch */
         .theme-switch-wrapper {
             position: absolute;
             top: 20px;
@@ -310,20 +262,12 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
-
-        /* Medallion Image */
-        .medallion {
-            width: 180px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-        }
     </style>
 </head>
 <body>
-    <!-- Login Page -->
-    <div class="login-container" id="login-container">
-        <div class="login-form">
+    <!-- Login Page Content -->
+    <div class="login-page">
+        <div class="login-container">
             <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
             <h2>Login</h2>
             <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
@@ -341,43 +285,47 @@
         </div>
     </div>
 
-    <!-- Video Page -->
-    <header>
-        <button id="menu-toggle" class="menu-button">Menu</button>
-        <div class="menu-content">
-            <a href="#video1">Amr Diab - El Ta'ama</a>
-            <a href="#video2">Amr Diab - Tetehabi</a>
-            <a href="#video3">Magd El Qasem - Qasswet Albak</a>
-            <a href="#video4">Amr Diab - El Ta'ama (Maqsoum Remix</a>
-            <a href="#video5">اه يا زمن</a>
-        </div>
-    </header>
+    <!-- Video Page Content -->
+    <div class="video-page">
+        <header>
+            <button id="menu-toggle" class="menu-button">☰</button>
+            <div class="menu-content">
+                <a href="#video1">Amr Diab - El Ta'ama</a>
+                <a href="#video2">Amr Diab - Tetehabi</a>
+                <a href="#video3">Magd El Qasem - Qasswet Albak</a>
+                <a href="#video4">Amr Diab - El Ta'ama (Maqsoum Remix</a>
+                <a href="#video5">اه يا زمن</a>
+            </div>
+        </header>
 
-    <section class="content" id="video-page" class="hidden">
-        <div class="video-container">
+        <section class="video-container">
             <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-            <div id="welcome-container" class="hidden"></div>
-
+            <div id="welcome-container"></div>
+            
             <!-- Video Sections -->
             <div class="video-section" id="video1">
                 <h1>Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
                 <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
             </div>
+
             <div class="video-section" id="video2">
                 <h1>Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
                 <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
+
             <div class="video-section" id="video3">
                 <h1>Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
                 <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
             </div>
+
             <div class="video-section" id="video4">
                 <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
+
             <div class="video-section" id="video5">
                 <h1>اه يا زمن</h1>
-                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
             </div>
 
             <!-- Contact Icons -->
@@ -390,25 +338,23 @@
                 </a>
             </div>
             <p class="video-footer-text">Developed by Eng: Mora</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Dark Mode Switch -->
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-        <label for="theme-switch" class="theme-switch-label">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌚</span>
-        </label>
+        <!-- Dark Mode Switch -->
+        <div class="theme-switch-wrapper">
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="theme-switch-label">
+                <span class="sun-icon">🌞</span>
+                <span class="moon-icon">🌚</span>
+            </label>
+        </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
         let activeUsers = {};
 
         function login() {
             const username = document.getElementById('username').value.trim();
-            const welcomeContainer = document.getElementById('welcome-container');
             if (username === '') {
                 alert('Please enter a username.');
                 return;
@@ -419,10 +365,11 @@
                     alert('This username is already logged in on another device.');
                 } else {
                     activeUsers[username] = true;
-                    document.querySelector('.login-container').style.display = 'none';
-                    document.querySelector('#video-page').style.display = 'block';
+                    document.querySelector('.login-page').style.display = 'none';
+                    document.querySelector('.video-page').style.display = 'block';
 
                     // Set personalized welcome message
+                    const welcomeContainer = document.getElementById('welcome-container');
                     if (username === '45455') {
                         welcomeContainer.textContent = 'Welcome, Teto 🤩!';
                     } else if (username === '45454') {
@@ -462,40 +409,33 @@
             }
         }
 
-        // Function to show/hide the menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const menuContent = document.querySelector('.menu-content');
-
-        menuToggle.addEventListener('click', () => {
-            menuContent.classList.toggle('show');
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.add(savedTheme);
+                if (savedTheme === 'dark-mode') {
+                    document.getElementById('theme-switch').checked = true;
+                }
+            }
+            setWelcomeMessage();
         });
 
-        // Smooth scroll to video sections
-        document.querySelectorAll('.menu-content a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        document.getElementById('theme-switch').addEventListener('change', toggleDarkMode);
 
-        // Set a personalized welcome message
+        // Set theme on page load based on the saved theme in localStorage
         function setWelcomeMessage() {
+            const username = document.getElementById('username').value.trim();
             const welcomeContainer = document.getElementById('welcome-container');
-            const urlParams = new URLSearchParams(window.location.search);
-            const username = urlParams.get('username');
-            
             if (username === '45455') {
                 welcomeContainer.textContent = 'Welcome, Teto 🤩!';
             } else if (username === '45454') {
                 welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
             }
-            setTimeout(() => {
-                welcomeContainer.classList.add('hidden');
-            }, 7000);  // Display welcome message for 7 seconds
         }
 
-        // Call the setWelcomeMessage function when the page loads
-        window.addEventListener('load', setWelcomeMessage);
+        // Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menuContent = document.querySelector('.menu-content');
+            menuContent.classList.toggle('show');
+        });
     </script>
