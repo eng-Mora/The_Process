@@ -124,8 +124,21 @@
         .medallion {
             width: 180px;
             height: auto;
-            margin: 0 auto 20px;
-            display: block;
+            margin: 0;
+            display: inline-block; /* Display image inline */
+        }
+        .menu-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 20px; /* Space between image and button */
+            font-size: 16px;
+        }
+        .menu-button:hover {
+            background-color: #45a049;
         }
         .video-container {
             padding: 56.25% 0 0 0;
@@ -175,6 +188,8 @@
         }
         .video-section {
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
         .video-menu {
             position: absolute;
@@ -272,21 +287,27 @@
             document.body.classList.toggle('dark-mode');
             const themeSwitch = document.getElementById('theme-switch');
             if (document.body.classList.contains('dark-mode')) {
-                themeSwitch.checked = true;
+                localStorage.setItem('theme', 'dark');
             } else {
-                themeSwitch.checked = false;
+                localStorage.setItem('theme', 'light');
             }
         }
 
-        function toggleMenu() {
-            const menu = document.querySelector('.video-menu');
-            menu.classList.toggle('open');
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            // Add scroll event listener to update menu active link
+            // Check saved theme preference
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-switch').checked = true;
+            }
+
+            // Handle menu toggle
+            document.querySelector('.menu-button').addEventListener('click', () => {
+                document.querySelector('.video-menu').classList.toggle('open');
+            });
+
+            // Menu functionality
             const menuLinks = document.querySelectorAll('.video-menu a');
-            const sections = document.querySelectorAll('.video-item h1');
+            const sections = Array.from(menuLinks).map(link => document.querySelector(link.getAttribute('href')));
 
             window.addEventListener('scroll', () => {
                 let index = sections.length - 1;
@@ -308,13 +329,6 @@
                         block: 'start'
                     });
                 });
-            });
-
-            // Toggle menu visibility
-            document.querySelector('.video-menu').addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') {
-                    toggleMenu();
-                }
             });
 
             // Initial check to highlight active link
@@ -348,7 +362,10 @@
 
             <!-- Video Content -->
             <div class="video-content">
-                <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+                <div style="display: flex; align-items: center;">
+                    <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+                    <button class="menu-button">☰ Menu</button>
+                </div>
                 <div id="welcome-container"></div>
                 
                 <div class="video-item">
@@ -409,4 +426,3 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
-
