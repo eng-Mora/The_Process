@@ -25,6 +25,7 @@
             transition: background-color 0.5s, color 0.5s;
             overflow-y: auto;
             height: 100vh;
+            position: relative; /* Added for the menu button positioning */
         }
         .container img {
             width: 180px;
@@ -105,7 +106,6 @@
         body.dark-mode button:hover {
             background-color: #3a8b3e;
         }
-
         #welcome-container {
             position: absolute;
             top: 10px;
@@ -179,36 +179,20 @@
             opacity: 0;
         }
 
-        .menu-toggle {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-
-        .menu-toggle:hover {
-            background-color: #45a049;
-        }
-
+        /* Sidebar styles */
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
             width: 250px;
             height: 100%;
-            background-color: #fff;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
-            padding: 20px;
-            transition: transform 0.3s ease;
+            background-color: #333;
+            color: #fff;
             transform: translateX(-100%);
-            overflow-y: auto;
+            transition: transform 0.3s ease;
             z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
         }
 
         .sidebar.active {
@@ -222,7 +206,6 @@
         .menu {
             list-style-type: none;
             padding: 0;
-            margin: 0;
         }
 
         .menu li {
@@ -230,14 +213,81 @@
         }
 
         .menu a {
+            color: #fff;
             text-decoration: none;
-            color: #4CAF50;
         }
 
         .menu a:hover {
             text-decoration: underline;
         }
 
+        /* Smaller menu icon */
+        .menu-toggle {
+            position: absolute;
+            top: 10px; /* Adjusted for the position of the icon */
+            left: 10px; /* Position from the left edge */
+            background: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 50%; /* Circle shape */
+            width: 40px; /* Size of the button */
+            height: 40px; /* Size of the button */
+            font-size: 24px; /* Size of the icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .menu-toggle:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .menu-toggle::before {
+            content: '☰'; /* Hamburger icon */
+            font-size: 24px; /* Adjust icon size */
+            color: white; /* Icon color */
+        }
+
+        .menu-toggle::after {
+            content: '';
+            position: absolute;
+            top: 10px; /* Position the square in the middle of the top */
+            left: 50%;
+            width: 10px; /* Size of the square */
+            height: 10px; /* Size of the square */
+            background: white; /* Square color */
+            transform: translateX(-50%); /* Center the square horizontally */
+        }
+
+        .content {
+            padding-top: 70px; /* Adjusted for the position of the menu button */
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff4d4d; /* Red background */
+            color: white;
+            border: none;
+            border-radius: 4px; /* Square corners */
+            width: 15px;
+            height: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001; /* Ensure the button is on top */
+        }
+
+        .close-btn:hover {
+            background: #ff3333; /* Darker red on hover */
+        }
     </style>
     <script>
         let activeUsers = {};
@@ -288,6 +338,10 @@
             }
         });
 
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             const themeSwitch = document.getElementById('theme-switch');
@@ -297,15 +351,11 @@
                 themeSwitch.checked = false;
             }
         }
-
-        function toggleSidebar() {
-            document.querySelector('.sidebar').classList.toggle('active');
-        }
     </script>
 </head>
 <body>
     <div class="container" id="login-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
+        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
         <h2>Login</h2>
         <input type="text" id="username" placeholder="Enter username" onkeypress="handleEnterKey(event)">
         <button onclick="login()">Login</button>
@@ -313,8 +363,9 @@
     </div>
 
     <div class="container hidden" id="video-container">
-        <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+        <button class="menu-toggle" onclick="toggleSidebar()"></button>  <!-- Menu Icon Button -->
         <div class="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">✖</button> <!-- Close Button -->
             <div class="menu-content">
                 <ul class="menu">
                     <li><a href="#video-1">Amr Diab - El Ta'ama</a></li>
@@ -325,6 +376,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- Main Content Section -->
         <section class="content">
             <h1 id="video-1">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
@@ -344,32 +396,23 @@
             
             <h1 id="video-4">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
+                <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix)"></iframe>
             </div>
             
             <h1 id="video-5">اه يا زمن</h1>
             <div class="video-container">
-                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
             </div>
 
-            <!-- Contact Icons -->
-            <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-            <div class="contact-icons">
-                <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-                </a>
-                <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-                </a>
-            </div>
-            <p class="video-footer-text">Developed by Eng: Mora</p>
+            <p class="video-footer-text">Enjoy the videos! 😄</p>
         </section>
 
         <div class="theme-switch-wrapper">
             <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-            <label for="theme-switch" class="theme-switch-label">
-                <span class="sun-icon">🌞</span>
-                <span class="moon-icon">🌚</span>
+            <label class="theme-switch-label" for="theme-switch">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
             </label>
         </div>
+        <div id="welcome-container"></div>
     </div>
