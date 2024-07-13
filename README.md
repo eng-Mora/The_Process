@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -179,6 +178,66 @@
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
+
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-toggle:hover {
+            background-color: #45a049;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .menu-content {
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
     </style>
     <script>
         let activeUsers = {};
@@ -238,76 +297,79 @@
                 themeSwitch.checked = false;
             }
         }
+
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
     </script>
 </head>
 <body>
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
+        <input type="text" id="username" placeholder="Enter username" onkeypress="handleEnterKey(event)">
         <button onclick="login()">Login</button>
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            </a>
-        </div>
         <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
     <div class="container hidden" id="video-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-        <div id="welcome-container"></div>
-        
-        <!-- Video Section -->
-        <div class="video-section">
-            <h1>Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
+        <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+        <div class="sidebar">
+            <div class="menu-content">
+                <ul class="menu">
+                    <li><a href="#video-1">Amr Diab - El Ta'ama</a></li>
+                    <li><a href="#video-2">Amr Diab - Tetehabi</a></li>
+                    <li><a href="#video-3">Magd El Qasem - Qasswet Albak</a></li>
+                    <li><a href="#video-4">Amr Diab - El Ta'ama (Maqsoum Remix)</a></li>
+                    <li><a href="#video-5">اه يا زمن</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content Section -->
+        <section class="content">
+            <h1 id="video-1">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
             </div>
             
-            <h1>Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
+            <h1 id="video-2">Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
             
-            <h1>Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
+            <h1 id="video-3">Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
             </div>
             
-            <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
+            <h1 id="video-4">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
             </div>
-                                    <h1>اه يا زمن </h1>
+            
+            <h1 id="video-5">اه يا زمن</h1>
             <div class="video-container">
                 <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+            </div>
+
+            <!-- Contact Icons -->
+            <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+                </a>
+                <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+                </a>
+            </div>
+            <p class="video-footer-text">Developed by Eng: Mora</p>
+        </section>
+
+        <div class="theme-switch-wrapper">
+            <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
+            <label for="theme-switch" class="theme-switch-label">
+                <span class="sun-icon">🌞</span>
+                <span class="moon-icon">🌚</span>
+            </label>
         </div>
-
-        <!-- Contact Icons -->
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            </a>
-        </div>
-        <p class="video-footer-text">Developed by Eng: Mora</p>
     </div>
-
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-        <label for="theme-switch" class="theme-switch-label">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌚</span>
-        </label>
-    </div>
-</body>
-</html>
-
