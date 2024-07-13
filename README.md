@@ -26,6 +26,7 @@
             transition: background-color 0.5s, color 0.5s;
             overflow-y: auto;
             height: 100vh;
+            position: relative; /* Ensure menu can be positioned relative to this container */
         }
         .container img {
             width: 180px;
@@ -176,7 +177,9 @@
             display: flex;
         }
         .video-menu {
-            width: 250px;
+            position: absolute;
+            left: -260px; /* Menu placed outside the main container */
+            top: 0;
             background-color: #f8f8f8;
             border-radius: 8px;
             padding: 15px;
@@ -184,6 +187,11 @@
             margin-right: 20px;
             height: 100%;
             overflow-y: auto;
+            width: 250px;
+            transition: left 0.3s ease;
+        }
+        .video-menu.open {
+            left: 0; /* Menu visible */
         }
         .video-menu h3 {
             margin-top: 0;
@@ -205,6 +213,7 @@
         }
         .video-content {
             flex: 1;
+            margin-left: 20px;
         }
         .video-item {
             margin-bottom: 20px;
@@ -269,30 +278,47 @@
             }
         }
 
+        function toggleMenu() {
+            const menu = document.querySelector('.video-menu');
+            menu.classList.toggle('open');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             // Add scroll event listener to update menu active link
             const menuLinks = document.querySelectorAll('.video-menu a');
             const sections = document.querySelectorAll('.video-item h1');
 
             window.addEventListener('scroll', () => {
-                let index = sections.length;
-
-                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-                menuLinks.forEach((link) => link.classList.remove('active'));
+                let index = sections.length - 1;
+                for (let i = 0; i < sections.length; i++) {
+                    if (sections[i].getBoundingClientRect().top < window.innerHeight / 2) {
+                        index = i;
+                    }
+                }
+                menuLinks.forEach(link => link.classList.remove('active'));
                 menuLinks[index].classList.add('active');
             });
 
-            // Add click event listeners to menu links
-            menuLinks.forEach((link) => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    document.getElementById(link.getAttribute('href').substring(1)).scrollIntoView({
+            // Add click event listener to menu links
+            menuLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelector(e.target.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
                 });
             });
+
+            // Toggle menu visibility
+            document.querySelector('.video-menu').addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    toggleMenu();
+                }
+            });
+
+            // Initial check to highlight active link
+            window.dispatchEvent(new Event('scroll'));
         });
     </script>
 </head>
@@ -311,6 +337,7 @@
         <div class="video-section">
             <!-- Sidebar Menu -->
             <div class="video-menu">
+                <button onclick="toggleMenu()">☰ Menu</button>
                 <h3>Video List</h3>
                 <a href="#el-taama">Amr Diab - El Ta'ama عمرو دياب - الطعامه</a>
                 <a href="#tetehabi">Amr Diab - Tetehabi عمرو دياب - تتحبي</a>
@@ -382,3 +409,4 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
+
