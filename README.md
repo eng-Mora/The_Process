@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-        /* Global styles */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -26,7 +25,6 @@
             transition: background-color 0.5s, color 0.5s;
             overflow-y: auto;
             height: 100vh;
-            position: relative; /* Ensure menu can be positioned relative to this container */
         }
         .container img {
             width: 180px;
@@ -86,7 +84,7 @@
             margin-bottom: 10px;
         }
         body.dark-mode .contact-message {
-            color: #f0f0f0; /* Color for dark mode */
+            color: white; /* Color for dark mode */
         }
         body.dark-mode {
             background-color: #2c2c2c;
@@ -107,6 +105,7 @@
         body.dark-mode button:hover {
             background-color: #3a8b3e;
         }
+
         #welcome-container {
             position: absolute;
             top: 10px;
@@ -124,21 +123,8 @@
         .medallion {
             width: 180px;
             height: auto;
-            margin: 0;
-            display: inline-block; /* Display image inline */
-        }
-        .menu-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-left: 20px; /* Space between image and button */
-            font-size: 16px;
-        }
-        .menu-button:hover {
-            background-color: #45a049;
+            margin: 0 auto 20px;
+            display: block;
         }
         .video-container {
             padding: 56.25% 0 0 0;
@@ -160,6 +146,7 @@
         body.dark-mode .video-footer-text {
             color: #f0f0f0;
         }
+
         .theme-switch-wrapper {
             position: absolute;
             top: 20px;
@@ -167,71 +154,29 @@
             display: flex;
             align-items: center;
         }
+
         .theme-switch {
             display: none;
         }
+
         .theme-switch-label {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
+
         .theme-switch-label .sun-icon,
         .theme-switch-label .moon-icon {
             font-size: 24px;
             transition: opacity 0.5s;
         }
+
         .theme-switch:checked + .theme-switch-label .sun-icon {
             opacity: 0;
         }
+
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
-        }
-        .video-section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .video-menu {
-            position: absolute;
-            left: -260px; /* Menu placed outside the main container */
-            top: 0;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-right: 20px;
-            height: 100%;
-            overflow-y: auto;
-            width: 250px;
-            transition: left 0.3s ease;
-        }
-        .video-menu.open {
-            left: 0; /* Menu visible */
-        }
-        .video-menu h3 {
-            margin-top: 0;
-        }
-        .video-menu a {
-            display: block;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #e0e0e0;
-            color: #333;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .video-menu a:hover {
-            background-color: #d0d0d0;
-        }
-        .video-menu a.active {
-            background-color: #b0b0b0;
-        }
-        .video-content {
-            flex: 1;
-            margin-left: 20px;
-        }
-        .video-item {
-            margin-bottom: 20px;
         }
     </style>
     <script>
@@ -287,122 +232,59 @@
             document.body.classList.toggle('dark-mode');
             const themeSwitch = document.getElementById('theme-switch');
             if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
+                themeSwitch.checked = true;
             } else {
-                localStorage.setItem('theme', 'light');
+                themeSwitch.checked = false;
             }
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Check saved theme preference
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('theme-switch').checked = true;
-            }
-
-            // Handle menu toggle
-            document.querySelector('.menu-button').addEventListener('click', () => {
-                document.querySelector('.video-menu').classList.toggle('open');
-            });
-
-            // Menu functionality
-            const menuLinks = document.querySelectorAll('.video-menu a');
-            const sections = Array.from(menuLinks).map(link => document.querySelector(link.getAttribute('href')));
-
-            window.addEventListener('scroll', () => {
-                let index = sections.length - 1;
-                for (let i = 0; i < sections.length; i++) {
-                    if (sections[i].getBoundingClientRect().top < window.innerHeight / 2) {
-                        index = i;
-                    }
-                }
-                menuLinks.forEach(link => link.classList.remove('active'));
-                menuLinks[index].classList.add('active');
-            });
-
-            // Add click event listener to menu links
-            menuLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.querySelector(e.target.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                });
-            });
-
-            // Initial check to highlight active link
-            window.dispatchEvent(new Event('scroll'));
-        });
     </script>
 </head>
 <body>
-    <!-- Login Page -->
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
-        <h2>Enter Your Username</h2>
-        <input type="text" id="username" placeholder="Enter Username" onkeypress="handleEnterKey(event)">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
+        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            </a>
+        </div>
         <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
-    <!-- Video Page -->
     <div class="container hidden" id="video-container">
+        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+        <div id="welcome-container"></div>
+        
+        <!-- Video Section -->
         <div class="video-section">
-            <!-- Sidebar Menu -->
-            <div class="video-menu">
-                <button onclick="toggleMenu()">☰ Menu</button>
-                <h3>Video List</h3>
-                <a href="#el-taama">Amr Diab - El Ta'ama عمرو دياب - الطعامه</a>
-                <a href="#tetehabi">Amr Diab - Tetehabi عمرو دياب - تتحبي</a>
-                <a href="#qasswet-albak">Magd El Qasem - Qasswet Albak مجد القاسم - قسوة قلبك</a>
-                <a href="#el-taama-remix">Amr Diab - El Ta'ama (Maqsoum Remix) عمرو دياب - الطعامه (ريميكس مقسوم)</a>
-                <a href="#ah-ya-zaman">اه يا زمن</a>
+            <h1>Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
             </div>
-
-            <!-- Video Content -->
-            <div class="video-content">
-                <div style="display: flex; align-items: center;">
-                    <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-                    <button class="menu-button">☰ Menu</button>
-                </div>
-                <div id="welcome-container"></div>
-                
-                <div class="video-item">
-                    <h1 id="el-taama">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Ej8eA09i6yE?si=E3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
-                </div>
-                
-                <div class="video-item">
-                    <h1 id="tetehabi">Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
-                </div>
-                
-                <div class="video-item">
-                    <h1 id="qasswet-albak">Magd El Qasem - Qasswet Albak مجد القاسم - قسوة قلبك</h1>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
-                </div>
-                
-                <div class="video-item">
-                    <h1 id="el-taama-remix">Amr Diab - El Ta'ama (Maqsoum Remix) عمرو دياب - الطعامه (ريميكس مقسوم)</h1>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix)"></iframe>
-                </div>
-                
-                <div class="video-item">
-                    <h1 id="ah-ya-zaman">اه يا زمن</h1>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
-                </div>
+            
+            <h1>Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
             </div>
+            
+            <h1>Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+            </div>
+            
+            <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
+            </div>
+                                    <h1>اه يا زمن </h1>
+            <div class="video-container">
+                <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
         </div>
 
         <!-- Contact Icons -->
@@ -418,7 +300,6 @@
         <p class="video-footer-text">Developed by Eng: Mora</p>
     </div>
 
-    <!-- Theme Switcher -->
     <div class="theme-switch-wrapper">
         <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
         <label for="theme-switch" class="theme-switch-label">
@@ -426,3 +307,4 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
+
