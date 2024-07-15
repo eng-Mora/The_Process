@@ -206,13 +206,31 @@
             color: white;
             border: none;
             padding: 2px 5px; /* Smaller padding */
-            font-size: 14px; /* Smaller font size */
+            font-size: 10px; /* Smaller font size */
             cursor: pointer;
             border-radius: 4px;
             margin: 20px 0 0 0; /* Add margin for spacing */
         }
         .logout-button:hover {
             background-color: #c0392b;
+        }
+
+        /* Menu video titles */
+        .menu-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-content ul li {
+            padding: 10px 15px;
+            cursor: pointer; /* Hand cursor for menu items */
+            transition: background-color 0.3s;
+        }
+
+        .menu-content ul li:hover {
+            background-color: #444; /* Optional: change background color on hover */
+            border-radius: 4px;
         }
     </style>
     <script>
@@ -258,37 +276,28 @@
             }
         }
 
-        window.addEventListener('beforeunload', function () {
+        window.addEventListener('beforeunload', () => {
             const username = document.getElementById('username').value.trim();
-            if (username && activeUsers[username]) {
+            if (username === '45455' || username === '45454') {
                 delete activeUsers[username];
             }
         });
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const themeSwitch = document.getElementById('theme-switch');
-            if (document.body.classList.contains('dark-mode')) {
-                themeSwitch.checked = true;
-            } else {
-                themeSwitch.checked = false;
-            }
-        }
-
         function showVideo(videoId) {
-            const videos = document.querySelectorAll('.video-container');
-            videos.forEach(video => video.classList.add('hidden'));
+            document.querySelectorAll('.video-container').forEach(video => {
+                video.classList.add('hidden');
+            });
             document.getElementById(videoId).classList.remove('hidden');
         }
 
         function logout() {
-            const username = document.getElementById('username').value.trim();
-            if (username) {
-                delete activeUsers[username];
-            }
-            document.getElementById('login-container').classList.remove('hidden');
             document.getElementById('video-container').classList.add('hidden');
+            document.getElementById('login-container').classList.remove('hidden');
             document.getElementById('username').value = '';
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
         }
     </script>
 </head>
