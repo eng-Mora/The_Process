@@ -128,16 +128,16 @@
             display: block;
         }
         .video-container {
-            padding: 56.25% 0 0 0;
+            padding: 10px 0; /* Adjust padding to add space around the title and video */
             position: relative;
-            margin-bottom: 30px; /* Increase margin-bottom for more space between videos */
+            margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
+            text-align: center; /* Center align the text */
+        }
+        .video-title {
+            font-size: 24px; /* Adjust the font size for the video title */
+            margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             border-radius: 8px; /* Add border-radius to match the design */
         }
         .video-footer-text {
@@ -334,27 +334,27 @@
 
         <!-- Video Section -->
         <div id="video1" class="video-container">
-            <h1>Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
+            <h1 class="video-title">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
             <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
         </div>
         
         <div id="video2" class="video-container hidden">
-            <h1>Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
+            <h1 class="video-title">Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
             <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
         </div>
         
         <div id="video3" class="video-container hidden">
-            <h1>Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
+            <h1 class="video-title">Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
             <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
         </div>
         
         <div id="video4" class="video-container hidden">
-            <h1>Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
+            <h1 class="video-title">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
         </div>
         
         <div id="video5" class="video-container hidden">
-            <h1>اه يا زمن</h1>
+            <h1 class="video-title">اه يا زمن</h1>
             <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
         </div>
 
