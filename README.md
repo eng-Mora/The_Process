@@ -207,7 +207,7 @@
             color: white;
             border: none;
             padding: 2px 5px; 
-            font-size: 10px; 
+            font-size: 15px; 
             cursor: pointer;
             border-radius: 4px;
             margin: 20px 0 0 0; 
@@ -244,24 +244,25 @@
             }
 
             if (username === '45455' || username === '45454') {
-                if (activeUsers[username]) {
-                    alert('This username is already logged in on another device.');
-                } else {
-                    activeUsers[username] = true;
-                    document.getElementById('login-container').classList.add('hidden');
-                    document.getElementById('video-container').classList.remove('hidden');
-
-                    if (username === '45455') {
-                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                    } else if (username === '45454') {
-                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
-                    }
-
-                    welcomeContainer.classList.remove('hidden');
-                    setTimeout(() => {
-                        welcomeContainer.classList.add('hidden');
-                    }, 7000);  
+                if (Object.keys(activeUsers).length > 0) {
+                    alert('Another user is already logged in. Please log out first.');
+                    return;
                 }
+
+                activeUsers[username] = true;
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('video-container').classList.remove('hidden');
+
+                if (username === '45455') {
+                    welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                } else if (username === '45454') {
+                    welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                }
+
+                welcomeContainer.classList.remove('hidden');
+                setTimeout(() => {
+                    welcomeContainer.classList.add('hidden');
+                }, 7000);  
             } else {
                 alert('Invalid username');
             }
@@ -291,6 +292,8 @@
             document.getElementById('video-container').classList.add('hidden');
             document.getElementById('login-container').classList.remove('hidden');
             document.getElementById('username').value = '';
+            // Clear the active users object
+            activeUsers = {};
         }
 
         function toggleDarkMode() {
