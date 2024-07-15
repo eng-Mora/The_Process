@@ -202,15 +202,14 @@
         }
 
         .logout-button {
-            position: static; 
             background-color: #e74c3c;
             color: white;
             border: none;
-            padding: 2px 5px; 
-            font-size: 15px; 
+            padding: 2px 5px;
+            font-size: 15px;
             cursor: pointer;
             border-radius: 4px;
-            margin: 20px 0 0 0; 
+            margin: 20px 0 0 0;
         }
         .logout-button:hover {
             background-color: #c0392b;
@@ -223,12 +222,12 @@
 
         .menu-content ul li {
             padding: 10px 15px;
-            cursor: pointer; 
+            cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .menu-content ul li:hover {
-            background-color: #444; 
+            background-color: #444;
             border-radius: 4px;
         }
     </style>
@@ -304,7 +303,7 @@
 <body>
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
-        <h2>Login Page</h2>
+        <h2>The Process platform</h2>
         <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
