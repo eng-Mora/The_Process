@@ -127,11 +127,17 @@
             margin: 0 auto 20px;
             display: block;
         }
+
+        /* Updated styles for larger videos */
         .video-container {
-            padding: 70% 0 0 0;
+            padding: 56.25% 0 0 0; /* Aspect ratio 16:9 */
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Increased margin for better spacing */
+            width: 100%; /* Full width of the container */
+            max-width: 960px; /* Maximum width for the videos */
+            margin: 0 auto; /* Center the videos */
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -206,7 +212,7 @@
             color: white;
             border: none;
             padding: 2px 5px; /* Smaller padding */
-            font-size: 15px; /* Smaller font size */
+            font-size: 10px; /* Smaller font size */
             cursor: pointer;
             border-radius: 4px;
             margin: 20px 0 0 0; /* Add margin for spacing */
@@ -245,28 +251,17 @@
             }
 
             if (username === '45455' || username === '45454') {
-                if (activeUsers[username]) {
-                    alert('This username is already logged in on another device.');
-                } else {
+                if (!activeUsers[username]) {
                     activeUsers[username] = true;
                     document.getElementById('login-container').classList.add('hidden');
                     document.getElementById('video-container').classList.remove('hidden');
-
-                    // Set personalized welcome message
-                    if (username === '45455') {
-                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                    } else if (username === '45454') {
-                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
-                    }
-
-                    // Show welcome message for 7 seconds then hide it
+                    welcomeContainer.textContent = `Welcome ${username}`;
                     welcomeContainer.classList.remove('hidden');
-                    setTimeout(() => {
-                        welcomeContainer.classList.add('hidden');
-                    }, 7000);  // Display welcome message for 7 seconds
+                } else {
+                    alert('User already logged in.');
                 }
             } else {
-                alert('Invalid username');
+                alert('Invalid username.');
             }
         }
 
