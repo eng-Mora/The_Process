@@ -206,7 +206,7 @@
             color: white;
             border: none;
             padding: 2px 5px; /* Smaller padding */
-            font-size: 10px; /* Smaller font size */
+            font-size: 15px; /* Smaller font size */
             cursor: pointer;
             border-radius: 4px;
             margin: 20px 0 0 0; /* Add margin for spacing */
