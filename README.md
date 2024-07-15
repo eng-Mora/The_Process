@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
+        /* Your existing styles */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -241,6 +242,7 @@
                     }
 
                     // Show welcome message for 7 seconds then hide it
+                    welcomeContainer.classList.remove('hidden');
                     setTimeout(() => {
                         welcomeContainer.classList.add('hidden');
                     }, 7000);  // Display welcome message for 7 seconds
@@ -309,7 +311,7 @@
 
     <div class="container hidden" id="video-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-        <div id="welcome-container"></div>
+        <div id="welcome-container" class="hidden"></div>
         
         <!-- Menu Button -->
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
