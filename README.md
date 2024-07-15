@@ -128,7 +128,7 @@
             display: block;
         }
         .video-container {
-            padding: 56.25% 0 0 0;
+            padding: 70% 0 0 0;
             position: relative;
             margin-bottom: 20px;
         }
