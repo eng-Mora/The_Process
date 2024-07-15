@@ -198,6 +198,21 @@
         .menu-button:hover {
             background-color: #45a049;
         }
+
+        .logout-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .logout-button:hover {
+            background-color: #c0392b;
+        }
     </style>
     <script>
         let activeUsers = {};
@@ -263,15 +278,25 @@
             videos.forEach(video => video.classList.add('hidden'));
             document.getElementById(videoId).classList.remove('hidden');
         }
+
+        function logout() {
+            const username = document.getElementById('username').value.trim();
+            if (username && activeUsers[username]) {
+                delete activeUsers[username];
+            }
+            document.getElementById('login-container').classList.remove('hidden');
+            document.getElementById('video-container').classList.add('hidden');
+            document.getElementById('username').value = '';
+        }
     </script>
 </head>
 <body>
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username" onkeydown="handleEnterKey(event)">
+        <h2>Login Page</h2>
+        <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+        <p class="footer-text">Developed by Eng: Mora</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
@@ -280,7 +305,6 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
         </div>
-        <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -336,6 +360,7 @@
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Mora</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
     </div>
 
     <div class="theme-switch-wrapper">
