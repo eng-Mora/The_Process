@@ -84,7 +84,7 @@
             margin-bottom: 10px;
         }
         body.dark-mode .contact-message {
-            color: white; /* Color for dark mode */
+            color: #f0f0f0; /* Color for dark mode */
         }
         body.dark-mode {
             background-color: #2c2c2c;
@@ -200,15 +200,15 @@
         }
 
         .logout-button {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
+            position: static; /* Make the position static */
             background-color: #e74c3c;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 2px 5px; /* Smaller padding */
+            font-size: 10px; /* Smaller font size */
             cursor: pointer;
             border-radius: 4px;
+            margin: 20px 0 0 0; /* Add margin for spacing */
         }
         .logout-button:hover {
             background-color: #c0392b;
@@ -281,7 +281,7 @@
 
         function logout() {
             const username = document.getElementById('username').value.trim();
-            if (username && activeUsers[username]) {
+            if (username) {
                 delete activeUsers[username];
             }
             document.getElementById('login-container').classList.remove('hidden');
