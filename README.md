@@ -22,7 +22,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             text-align: center;
             width: 100%;
-            max-width: 800px;
+            max-width: 1000px; /* Increase the max-width to make the container wider */
             transition: background-color 0.5s, color 0.5s;
             overflow-y: auto;
             height: 100vh;
@@ -130,7 +130,7 @@
         .video-container {
             padding: 56.25% 0 0 0;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Increase margin-bottom for more space between videos */
         }
         .video-container iframe {
             position: absolute;
@@ -138,6 +138,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border-radius: 8px; /* Add border-radius to match the design */
         }
         .video-footer-text {
             margin-top: 20px;
