@@ -298,7 +298,7 @@
         <h2>Login Page</h2>
         <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
-        <p class="footer-text">Developed by Eng: Mora</p>
+        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
@@ -307,6 +307,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
         </div>
+        <p class="footer-text">Developed by Eng: Mora</p>
     </div>
 
     <div class="container hidden" id="video-container">
