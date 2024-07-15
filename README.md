@@ -127,17 +127,11 @@
             margin: 0 auto 20px;
             display: block;
         }
-
-        /* Updated styles for larger videos */
         .video-container {
-            padding: 56.25% 0 0 0; /* Aspect ratio 16:9 */
+            padding: 56.25% 0 0 0;
             position: relative;
-            margin-bottom: 30px; /* Increased margin for better spacing */
-            width: 100%; /* Full width of the container */
-            max-width: 960px; /* Maximum width for the videos */
-            margin: 0 auto; /* Center the videos */
+            margin-bottom: 20px;
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -207,21 +201,19 @@
         }
 
         .logout-button {
-            position: static; /* Make the position static */
+            position: static; 
             background-color: #e74c3c;
             color: white;
             border: none;
-            padding: 2px 5px; /* Smaller padding */
-            font-size: 10px; /* Smaller font size */
+            padding: 2px 5px; 
+            font-size: 10px; 
             cursor: pointer;
             border-radius: 4px;
-            margin: 20px 0 0 0; /* Add margin for spacing */
+            margin: 20px 0 0 0; 
         }
         .logout-button:hover {
             background-color: #c0392b;
         }
-
-        /* Menu video titles */
         .menu-content ul {
             list-style-type: none;
             padding: 0;
@@ -230,12 +222,12 @@
 
         .menu-content ul li {
             padding: 10px 15px;
-            cursor: pointer; /* Hand cursor for menu items */
+            cursor: pointer; 
             transition: background-color 0.3s;
         }
 
         .menu-content ul li:hover {
-            background-color: #444; /* Optional: change background color on hover */
+            background-color: #444; 
             border-radius: 4px;
         }
     </style>
@@ -251,17 +243,26 @@
             }
 
             if (username === '45455' || username === '45454') {
-                if (!activeUsers[username]) {
+                if (activeUsers[username]) {
+                    alert('This username is already logged in on another device.');
+                } else {
                     activeUsers[username] = true;
                     document.getElementById('login-container').classList.add('hidden');
                     document.getElementById('video-container').classList.remove('hidden');
-                    welcomeContainer.textContent = `Welcome ${username}`;
+
+                    if (username === '45455') {
+                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                    } else if (username === '45454') {
+                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                    }
+
                     welcomeContainer.classList.remove('hidden');
-                } else {
-                    alert('User already logged in.');
+                    setTimeout(() => {
+                        welcomeContainer.classList.add('hidden');
+                    }, 7000);  
                 }
             } else {
-                alert('Invalid username.');
+                alert('Invalid username');
             }
         }
 
