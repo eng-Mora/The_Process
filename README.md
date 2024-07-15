@@ -134,7 +134,7 @@
             text-align: center; /* Center align the text */
         }
         .video-title {
-            font-size: 24px; /* Adjust the font size for the video title */
+            font-size: 20px; /* Adjust the font size for the video title */
             margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
