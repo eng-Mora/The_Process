@@ -82,7 +82,8 @@
         .contact-message {
             font-size: 18px;
             color: black; /* Default color for light mode */
-            margin-bottom: 10px;
+            margin-top: 10px; /* Adjusted margin-top to remove extra space */
+            margin-bottom: 10px; /* Keep the bottom margin */
         }
         body.dark-mode .contact-message {
             color: #f0f0f0; /* Color for dark mode */
@@ -130,7 +131,7 @@
         .video-container {
             padding: 10px 0; /* Adjust padding to add space around the title and video */
             position: relative;
-            margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
+            margin-bottom: 0; /* Remove space between video containers */
             text-align: center; /* Center align the text */
         }
         .video-title {
@@ -138,6 +139,8 @@
             margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
+            width: 90%; /* Make the iframe take the full width of the container */
+            height: 600px; /* Set a fixed height for the iframe */
             border-radius: 8px; /* Add border-radius to match the design */
         }
         .video-footer-text {
@@ -287,6 +290,7 @@
             <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
         </div>
         
+        
         <div id="video5" class="video-container hidden">
             <h1 class="video-title">اه يا زمن</h1>
             <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
@@ -344,6 +348,9 @@
                 setTimeout(() => {
                     welcomeContainer.classList.add('hidden');
                 }, 7000);  
+
+                // Save the logged-in state to localStorage
+                localStorage.setItem('loggedInUser', username);
             } else {
                 alert('Invalid username');
             }
@@ -354,13 +361,6 @@
                 login();
             }
         }
-
-        window.addEventListener('beforeunload', () => {
-            const username = document.getElementById('username').value.trim();
-            if (username === '45455' || username === '45454') {
-                delete activeUsers[username];
-            }
-        });
 
         function showVideo(videoId) {
             document.querySelectorAll('.video-container').forEach(video => {
@@ -375,9 +375,38 @@
             document.getElementById('username').value = '';
             // Clear the active users object
             activeUsers = {};
+            localStorage.removeItem('loggedInUser'); // Clear the logged-in user from localStorage
         }
 
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
+        // Check the localStorage for a logged-in user when the page loads
+        window.addEventListener('load', () => {
+            const username = localStorage.getItem('loggedInUser');
+            if (username === '45455' || username === '45454') {
+                activeUsers[username] = true;
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('video-container').classList.remove('hidden');
+                const welcomeContainer = document.getElementById('welcome-container');
+                if (username === '45455') {
+                    welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                } else if (username === '45454') {
+                    welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                }
+                welcomeContainer.classList.remove('hidden');
+                setTimeout(() => {
+                    welcomeContainer.classList.add('hidden');
+                }, 7000);  
+            }
+        });
+
+        // Remove the logged-in user from localStorage on beforeunload
+        window.addEventListener('beforeunload', () => {
+            const username = localStorage.getItem('loggedInUser');
+            if (username === '45455' || username === '45454') {
+                delete activeUsers[username];
+            }
+        });
     </script>
