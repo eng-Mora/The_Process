@@ -231,6 +231,88 @@
             border-radius: 4px;
         }
     </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
+        <h2>The Process platform</h2>
+        <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
+        <button onclick="login()">Login</button>
+        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            </a>
+        </div>
+        <p class="footer-text">Developed by Eng: Mora</p>
+    </div>
+
+    <div class="container hidden" id="video-container">
+        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+        <div id="welcome-container" class="hidden"></div>
+        
+        <!-- Menu Button -->
+        <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
+        <div id="video-menu" class="menu-content hidden">
+            <ul>
+                <li onclick="showVideo('video1')">Amr Diab - El Ta'ama</li>
+                <li onclick="showVideo('video2')">Amr Diab - Tetehabi</li>
+                <li onclick="showVideo('video3')">Magd El Qasem - Qasswet Albak</li>
+                <li onclick="showVideo('video4')">Amr Diab - El Ta'ama (Maqsoum Remix)</li>
+                <li onclick="showVideo('video5')">اه يا زمن</li>
+            </ul>
+        </div>
+
+        <!-- Video Section -->
+        <div id="video1" class="video-container hidden">
+            <h1 class="video-title">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
+            <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
+        </div>
+        
+        <div id="video2" class="video-container hidden">
+            <h1 class="video-title">Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
+            <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
+        </div>
+        
+        <div id="video3" class="video-container hidden">
+            <h1 class="video-title">Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
+            <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
+        </div>
+        
+        <div id="video4" class="video-container hidden">
+            <h1 class="video-title">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
+            <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
+        </div>
+        
+        <div id="video5" class="video-container hidden">
+            <h1 class="video-title">اه يا زمن</h1>
+            <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
+        </div>
+
+        <!-- Contact Icons -->
+        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
+        <div class="contact-icons">
+            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            </a>
+        </div>
+        <p class="video-footer-text">Developed by Eng: Mora</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="theme-switch-wrapper">
+        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
+        <label for="theme-switch" class="theme-switch-label">
+            <span class="sun-icon">🌞</span>
+            <span class="moon-icon">🌚</span>
+        </label>
+    </div>
     <script>
         let activeUsers = {};
 
@@ -299,85 +381,3 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
-</head>
-<body>
-    <div class="container" id="login-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image">
-        <h2>The Process platform</h2>
-        <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
-        <button onclick="login()">Login</button>
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            </a>
-        </div>
-        <p class="footer-text">Developed by Eng: Mora</p>
-    </div>
-
-    <div class="container hidden" id="video-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
-        <div id="welcome-container" class="hidden"></div>
-        
-        <!-- Menu Button -->
-        <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
-        <div id="video-menu" class="menu-content hidden">
-            <ul>
-                <li onclick="showVideo('video1')">Amr Diab - El Ta'ama</li>
-                <li onclick="showVideo('video2')">Amr Diab - Tetehabi</li>
-                <li onclick="showVideo('video3')">Magd El Qasem - Qasswet Albak</li>
-                <li onclick="showVideo('video4')">Amr Diab - El Ta'ama (Maqsoum Remix)</li>
-                <li onclick="showVideo('video5')">اه يا زمن</li>
-            </ul>
-        </div>
-
-        <!-- Video Section -->
-        <div id="video1" class="video-container">
-            <h1 class="video-title">Amr Diab - El Ta'ama عمرو دياب - الطعامه</h1>
-            <iframe src="https://www.youtube.com/embed/zrTT4CJAvZs?si=2OVur3UJKSbsJvpM" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama"></iframe>
-        </div>
-        
-        <div id="video2" class="video-container hidden">
-            <h1 class="video-title">Amr Diab - Tetehabi عمرو دياب - تتحبي</h1>
-            <iframe src="https://www.youtube.com/embed/fDaHi6t9y9k?si=iYTIaiR3khSskU46" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - Tetehabi"></iframe>
-        </div>
-        
-        <div id="video3" class="video-container hidden">
-            <h1 class="video-title">Magd El Qasem - Qasswet Albak| مجد القاسم - قسوة قلبك</h1>
-            <iframe src="https://www.youtube.com/embed/Spo8ijT3WKI?si=_j0KJVMSUUKYq6ft" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Magd El Qasem - Qasswet Albak"></iframe>
-        </div>
-        
-        <div id="video4" class="video-container hidden">
-            <h1 class="video-title">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
-            <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
-        </div>
-        
-        <div id="video5" class="video-container hidden">
-            <h1 class="video-title">اه يا زمن</h1>
-            <iframe src="https://fast.wistia.net/embed/iframe/iu5pz1rqv3?videoFoam=true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="اه يا زمن"></iframe>
-        </div>
-
-        <!-- Contact Icons -->
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            </a>
-        </div>
-        <p class="video-footer-text">Developed by Eng: Mora</p>
-        <button class="logout-button" onclick="logout()">Logout</button>
-    </div>
-
-    <div class="theme-switch-wrapper">
-        <input type="checkbox" id="theme-switch" class="theme-switch" onclick="toggleDarkMode()">
-        <label for="theme-switch" class="theme-switch-label">
-            <span class="sun-icon">🌞</span>
-            <span class="moon-icon">🌚</span>
-        </label>
-    </div>
