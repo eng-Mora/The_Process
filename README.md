@@ -4,18 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-        /* Reset default margin and padding */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+        /* Your existing styles */
         body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
+            margin: 0;
             transition: background-color 0.5s, color 0.5s;
         }
         .container {
@@ -27,9 +24,8 @@
             width: 100%;
             max-width: 1000px; /* Increase the max-width to make the container wider */
             transition: background-color 0.5s, color 0.5s;
-            overflow: hidden; /* Prevent scrollbars */
-            height: 100vh; /* Full viewport height */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            overflow-y: auto;
+            height: 100vh;
         }
         .container img {
             width: 180px;
@@ -86,8 +82,8 @@
         .contact-message {
             font-size: 18px;
             color: black; /* Default color for light mode */
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 10px; /* Adjusted margin-top to remove extra space */
+            margin-bottom: 10px; /* Keep the bottom margin */
         }
         body.dark-mode .contact-message {
             color: #f0f0f0; /* Color for dark mode */
@@ -133,19 +129,19 @@
             display: block;
         }
         .video-container {
-            padding: 10px 0;
+            padding: 10px 0; /* Adjust padding to add space around the title and video */
             position: relative;
-            margin-bottom: 0;
-            text-align: center;
+            margin-bottom: 0; /* Remove space between video containers */
+            text-align: center; /* Center align the text */
         }
         .video-title {
-            font-size: 17px;
-            margin-bottom: 10px;
+            font-size: 17px; /* Adjust the font size for the video title */
+            margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
-            width: 90%;
-            height: 600px;
-            border-radius: 8px;
+            width: 90%; /* Make the iframe take the full width of the container */
+            height: 600px; /* Set a fixed height for the iframe */
+            border-radius: 8px; /* Add border-radius to match the design */
         }
         .video-footer-text {
             margin-top: 20px;
@@ -293,6 +289,7 @@
             <h1 class="video-title">Amr Diab - El Ta'ama (Maqsoum Remix عمرو دياب - الطعامه (ريميكس مقسوم</h1>
             <iframe src="https://www.youtube.com/embed/9KRVRzErIOg?si=j76ruz-bxIPa5ehu" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Amr Diab - El Ta'ama (Maqsoum Remix"></iframe>
         </div>
+        
         
         <div id="video5" class="video-container hidden">
             <h1 class="video-title">اه يا زمن</h1>
