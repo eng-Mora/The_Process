@@ -240,7 +240,8 @@
     <div class="container hidden" id="video-container">
         <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image" class="medallion">
         <div id="welcome-container" class="hidden"></div>
-        
+                <h2>The Process platform</h2>
+
         <!-- Menu Button -->
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
         <div id="video-menu" class="menu-content hidden">
