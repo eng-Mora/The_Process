@@ -245,6 +245,9 @@
             <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
+            <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOunyJYq8T5XLFcT2CN1cHvUJIJlDWgZj5yA&s" alt="Telegram Icon">
+            </a>
         </div>
         <p class="footer-text">Developed by Eng: Mora</p>
     </div>
@@ -300,6 +303,9 @@
             </a>
             <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            </a>
+            <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOunyJYq8T5XLFcT2CN1cHvUJIJlDWgZj5yA&s" alt="Telegram Icon">
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Mora</p>
