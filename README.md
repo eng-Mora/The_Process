@@ -237,7 +237,7 @@
 </head>
 <body>
     <div class="container" id="login-container">
-        <img src="https://i.ibb.co/kBFP4fc/Clipped-image-20240718-232638.png" alt="Medal Image">
+        <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image">
         <h2>The Process platform</h2>
         <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
