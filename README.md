@@ -238,7 +238,7 @@
     </div>
 
     <div class="container hidden" id="video-container">
-        <img src="https://i.ibb.co/t4dBqr9/26015241-c430-4b73-926a-4c46642063f0-removebg.png" alt="Medal Image" class="medallion">
+        <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image" class="medallion">
         <div id="welcome-container" class="hidden"></div>
         
         <!-- Menu Button -->
