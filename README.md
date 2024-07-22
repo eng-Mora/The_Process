@@ -31,6 +31,9 @@
             width: 180px;
             height: auto;
             margin-bottom: 20px;
+            background-color: #fff; /* Light background for images in light mode */
+            padding: 10px; /* Padding to ensure the background is visible */
+            border-radius: 8px; /* Optional: to match container style */
         }
         .container h2, .container h1 {
             margin-bottom: 20px;
@@ -95,6 +98,9 @@
             background-color: #3c3c3c;
             color: #f0f0f0;
         }
+        body.dark-mode .container img {
+            background-color: #3c3c3c; /* Dark background for images in dark mode */
+        }
         body.dark-mode input {
             background-color: #5c5c5c;
             color: #f0f0f0;
@@ -126,6 +132,12 @@
             height: auto;
             margin: 0 auto 20px;
             display: block;
+            background-color: #fff; /* Light background for medallion in light mode */
+            padding: 10px; /* Padding to ensure the background is visible */
+            border-radius: 8px; /* Optional: to match container style */
+        }
+        body.dark-mode .medallion {
+            background-color: #3c3c3c; /* Dark background for medallion in dark mode */
         }
         .video-container {
             padding: 10px 0; /* Adjust padding to add space around the title and video */
@@ -240,7 +252,7 @@
     <div class="container hidden" id="video-container">
         <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image" class="medallion">
         <div id="welcome-container" class="hidden"></div>
-                <h2>The Process platform</h2>
+        <h2>The Process platform</h2>
 
         <!-- Menu Button -->
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
@@ -300,6 +312,7 @@
             <span class="moon-icon">🌚</span>
         </label>
     </div>
+
     <script>
         let activeUsers = {};
 
