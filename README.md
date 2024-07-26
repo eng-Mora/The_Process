@@ -150,7 +150,7 @@
             margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
-            border-radius: 8px; /* Add border-radius to match the design */
+            border-radius: 35px; /* Add border-radius to match the design */
         }
         .video-footer-text {
             margin-top: 20px;
