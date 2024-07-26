@@ -140,7 +140,7 @@
             background-color: #3c3c3c; /* Dark background for medallion in dark mode */
         }
         .video-container {
-            padding: 40px 0; /* Adjust padding to add space around the title and video */
+            padding: 10px 0; /* Adjust padding to add space around the title and video */
             position: relative;
             margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
             text-align: center; /* Center align the text */
