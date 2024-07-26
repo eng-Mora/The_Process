@@ -140,7 +140,7 @@
             background-color: #3c3c3c; /* Dark background for medallion in dark mode */
         }
         .video-container {
-            padding: 10px 0; /* Adjust padding to add space around the title and video */
+            padding: 40px 0; /* Adjust padding to add space around the title and video */
             position: relative;
             margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
             text-align: center; /* Center align the text */
@@ -150,7 +150,7 @@
             margin-bottom: 10px; /* Add space between the title and the video */
         }
         .video-container iframe {
-            border-radius: 35px; /* Add border-radius to match the design */
+            border-radius: 8px; /* Add border-radius to match the design */
         }
         .video-footer-text {
             margin-top: 20px;
