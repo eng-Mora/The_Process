@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,9 +29,9 @@
             height: 100vh;
         }
         .container img {
-            width: 180px;
+            width: 160px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background-color: #fff; /* Light background for images in light mode */
             padding: 10px; /* Padding to ensure the background is visible */
             border-radius: 8px; /* Optional: to match container style */
@@ -48,14 +49,14 @@
         .container button {
             width: 100%;
             padding: 12px;
-            background-color: #4CAF50;
+            background-color: #9f54d9; /* Updated color */
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         .container button:hover {
-            background-color: #45a049;
+            background-color: #8c4aad; /* Slightly darker shade for hover effect */
         }
         .hidden {
             display: none;
@@ -106,13 +107,13 @@
             color: #f0f0f0;
             border: 1px solid #7c7c7c;
         }
-        body.dark-mode button {
-            background-color: #45a049;
+        body.dark-mode .container button {
+            background-color: #9f54d9; /* Color for the button in dark mode */
+            color: white; /* Text color for the button */
         }
-        body.dark-mode button:hover {
-            background-color: #3a8b3e;
+        body.dark-mode .container button:hover {
+            background-color: #8c4aad; /* Slightly darker shade for hover effect in dark mode */
         }
-
         #welcome-container {
             position: absolute;
             top: 10px;
@@ -160,7 +161,6 @@
         body.dark-mode .video-footer-text {
             color: #f0f0f0;
         }
-
         .theme-switch-wrapper {
             position: absolute;
             top: 20px;
@@ -168,31 +168,25 @@
             display: flex;
             align-items: center;
         }
-
         .theme-switch {
             display: none;
         }
-
         .theme-switch-label {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
-
         .theme-switch-label .sun-icon,
         .theme-switch-label .moon-icon {
             font-size: 24px;
             transition: opacity 0.5s;
         }
-
         .theme-switch:checked + .theme-switch-label .sun-icon {
             opacity: 0;
         }
-
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
-
         .menu-content {
             background-color: #2c2c2c;
             color: white;
@@ -212,22 +206,41 @@
         .menu-button:hover {
             background-color: #45a049;
         }
-
         .menu-content ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
         .menu-content ul li {
             padding: 10px 15px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .menu-content ul li:hover {
             background-color: #444;
             border-radius: 4px;
+        }
+        #loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff; /* Background color for the loading screen */
+            color: #333;
+            font-size: 20px;
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue color */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 1s linear infinite;
+            margin-left: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -246,10 +259,15 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
             <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
-                <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
+                <img src="https://www.svgrepo.com/show/303292/telegram-logo.svg" alt="Telegram Icon">
             </a>
         </div>
         <p class="footer-text">Developed by Eng: Amr Mohamed</p>
+    </div>
+
+    <div class="container hidden" id="loading-container">
+        <h2>Loading, please wait...</h2>
+        <div class="loader"></div>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -305,7 +323,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
             <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
-                <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
+                <img src="https://www.svgrepo.com/show/303292/telegram-logo.svg" alt="Telegram Icon">
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Amr Mohamed</p>
@@ -338,18 +356,24 @@
 
                 activeUsers[username] = true;
                 document.getElementById('login-container').classList.add('hidden');
-                document.getElementById('video-container').classList.remove('hidden');
+                document.getElementById('loading-container').classList.remove('hidden');
 
-                if (username === '45455') {
-                    welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                } else if (username === '45454') {
-                    welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
-                }
-
-                welcomeContainer.classList.remove('hidden');
+                // Simulate a loading delay
                 setTimeout(() => {
-                    welcomeContainer.classList.add('hidden');
-                }, 7000);  
+                    document.getElementById('loading-container').classList.add('hidden');
+                    document.getElementById('video-container').classList.remove('hidden');
+
+                    if (username === '45455') {
+                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                    } else if (username === '45454') {
+                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                    }
+
+                    welcomeContainer.classList.remove('hidden');
+                    setTimeout(() => {
+                        welcomeContainer.classList.add('hidden');
+                    }, 7000);
+                }, 2000); // Adjust the delay time as needed
             } else {
                 alert('Invalid username');
             }
@@ -379,3 +403,5 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
+</body>
+</html>
