@@ -1,248 +1,237 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-        /* Your existing styles */
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            transition: background-color 0.5s, color 0.5s;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            text-align: center;
-            width: 100%;
-            max-width: 1000px; /* Increase the max-width to make the container wider */
-            transition: background-color 0.5s, color 0.5s;
-            overflow-y: auto;
-            height: 100vh;
-        }
-        .container img {
-            width: 160px;
-            height: auto;
-            margin-bottom: 10px;
-            background-color: #fff; /* Light background for images in light mode */
-            padding: 10px; /* Padding to ensure the background is visible */
-            border-radius: 8px; /* Optional: to match container style */
-        }
-        .container h2, .container h1 {
-            margin-bottom: 20px;
-        }
-        .container input {
-            width: 100%;
-            padding: 12px;
-            margin: 12px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .container button {
-            width: 100%;
-            padding: 12px;
-            background-color: #9f54d9; /* Updated color */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .container button:hover {
-            background-color: #8c4aad; /* Slightly darker shade for hover effect */
-        }
-        .hidden {
-            display: none;
-        }
-        .icon {
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        .footer-text {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #888;
-        }
-        .contact-icons {
-            margin-top: 10px;
-        }
-        .contact-icons a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .contact-icons img {
-            width: 30px;
-            height: 30px;
-        }
-        .contact-message {
-            font-size: 18px;
-            color: black; /* Default color for light mode */
-            margin-bottom: 10px;
-        }
-        body.dark-mode .contact-message {
-            color: #f0f0f0; /* Color for dark mode */
-        }
-        body.dark-mode {
-            background-color: #2c2c2c;
-            color: #f0f0f0;
-        }
-        body.dark-mode .container {
-            background-color: #3c3c3c;
-            color: #f0f0f0;
-        }
-        body.dark-mode .container img {
-            background-color: #3c3c3c; /* Dark background for images in dark mode */
-        }
-        body.dark-mode input {
-            background-color: #5c5c5c;
-            color: #f0f0f0;
-            border: 1px solid #7c7c7c;
-        }
-        body.dark-mode .container button {
-            background-color: #9f54d9; /* Color for the button in dark mode */
-            color: white; /* Text color for the button */
-        }
-        body.dark-mode .container button:hover {
-            background-color: #8c4aad; /* Slightly darker shade for hover effect in dark mode */
-        }
-        #welcome-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
-            color: #888;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 12px 18px;
-            border-radius: 4px;
-        }
-        body.dark-mode #welcome-container {
-            color: #f0f0f0;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-        .medallion {
-            width: 180px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-            background-color: #fff; /* Light background for medallion in light mode */
-            padding: 10px; /* Padding to ensure the background is visible */
-            border-radius: 8px; /* Optional: to match container style */
-        }
-        body.dark-mode .medallion {
-            background-color: #3c3c3c; /* Dark background for medallion in dark mode */
-        }
-        .video-container {
-            padding: 10px 0; /* Adjust padding to add space around the title and video */
-            position: relative;
-            margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
-            text-align: center; /* Center align the text */
-        }
-        .video-title {
-            font-size: 17px; /* Adjust the font size for the video title */
-            margin-bottom: 10px; /* Add space between the title and the video */
-        }
-        .video-container iframe {
-            border-radius: 8px; /* Add border-radius to match the design */
-        }
-        .video-footer-text {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #888;
-        }
-        body.dark-mode .video-footer-text {
-            color: #f0f0f0;
-        }
-        .theme-switch-wrapper {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .theme-switch {
-            display: none;
-        }
-        .theme-switch-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        .theme-switch-label .sun-icon,
-        .theme-switch-label .moon-icon {
-            font-size: 24px;
-            transition: opacity 0.5s;
-        }
-        .theme-switch:checked + .theme-switch-label .sun-icon {
-            opacity: 0;
-        }
-        .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
-            opacity: 0;
-        }
-        .menu-content {
-            background-color: #2c2c2c;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .menu-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        .menu-button:hover {
-            background-color: #45a049;
-        }
-        .menu-content ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .menu-content ul li {
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .menu-content ul li:hover {
-            background-color: #444;
-            border-radius: 4px;
-        }
-        #loading-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #ffffff; /* Background color for the loading screen */
-            color: #333;
-            font-size: 20px;
-        }
-        .loader {
-            border: 16px solid #f3f3f3; /* Light grey */
-            border-top: 16px solid #3498db; /* Blue color */
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
-            margin-left: 20px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    /* Your existing styles */
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        transition: background-color 0.5s, color 0.5s;
+    }
+    .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 100%;
+        max-width: 1000px; /* Increase the max-width to make the container wider */
+        transition: background-color 0.5s, color 0.5s;
+        overflow-y: auto;
+        height: 100vh;
+    }
+    .container img {
+        width: 160px;
+        height: auto;
+        margin-bottom: 10px;
+        background-color: #fff; /* Light background for images in light mode */
+        padding: 10px; /* Padding to ensure the background is visible */
+        border-radius: 8px; /* Optional: to match container style */
+    }
+    .container h2, .container h1 {
+        margin-bottom: 20px;
+    }
+    .container input {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #9f54d9; /* Updated color */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .container button:hover {
+        background-color: #8c4aad; /* Slightly darker shade for hover effect */
+    }
+    .hidden {
+        display: none;
+    }
+    .icon {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .footer-text {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #888;
+    }
+    .contact-icons {
+        margin-top: 10px;
+    }
+    .contact-icons a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .contact-icons img {
+        width: 30px;
+        height: 30px;
+    }
+    .contact-message {
+        font-size: 18px;
+        color: black; /* Default color for light mode */
+        margin-bottom: 10px;
+    }
+    body.dark-mode .contact-message {
+        color: #f0f0f0; /* Color for dark mode */
+    }
+    body.dark-mode {
+        background-color: #2c2c2c;
+        color: #f0f0f0;
+    }
+    body.dark-mode .container {
+        background-color: #3c3c3c;
+        color: #f0f0f0;
+    }
+    body.dark-mode .container img {
+        background-color: #3c3c3c; /* Dark background for images in dark mode */
+    }
+    body.dark-mode input {
+        background-color: #5c5c5c;
+        color: #f0f0f0;
+        border: 1px solid #7c7c7c;
+    }
+    body.dark-mode .container button {
+        background-color: #9f54d9; /* Color for the button in dark mode */
+        color: white; /* Text color for the button */
+    }
+    body.dark-mode .container button:hover {
+        background-color: #8c4aad; /* Slightly darker shade for hover effect in dark mode */
+    }
+
+    #welcome-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        color: #888;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 12px 18px;
+        border-radius: 4px;
+    }
+    body.dark-mode #welcome-container {
+        color: #f0f0f0;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .medallion {
+        width: 180px;
+        height: auto;
+        margin: 0 auto 20px;
+        display: block;
+        background-color: #fff; /* Light background for medallion in light mode */
+        padding: 10px; /* Padding to ensure the background is visible */
+        border-radius: 8px; /* Optional: to match container style */
+    }
+    body.dark-mode .medallion {
+        background-color: #3c3c3c; /* Dark background for medallion in dark mode */
+    }
+    .video-container {
+        padding: 10px 0; /* Adjust padding to add space around the title and video */
+        position: relative;
+        margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
+        text-align: center; /* Center align the text */
+    }
+    .video-title {
+        font-size: 17px; /* Adjust the font size for the video title */
+        margin-bottom: 10px; /* Add space between the title and the video */
+    }
+    .video-container iframe {
+        border-radius: 8px; /* Add border-radius to match the design */
+    }
+    .video-footer-text {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #888;
+    }
+    body.dark-mode .video-footer-text {
+        color: #f0f0f0;
+    }
+
+    .theme-switch-wrapper {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .theme-switch {
+        display: none;
+    }
+
+    .theme-switch-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .theme-switch-label .sun-icon,
+    .theme-switch-label .moon-icon {
+        font-size: 24px;
+        transition: opacity 0.5s;
+    }
+
+    .theme-switch:checked + .theme-switch-label .sun-icon {
+        opacity: 0;
+    }
+
+    .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
+        opacity: 0;
+    }
+
+    .menu-content {
+        background-color: #2c2c2c;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .menu-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .menu-button:hover {
+        background-color: #45a049;
+    }
+
+    .menu-content ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-content ul li {
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .menu-content ul li:hover {
+        background-color: #444;
+        border-radius: 4px;
+    }
+</style>
+
 </head>
 <body>
     <div class="container" id="login-container">
@@ -259,15 +248,10 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
             <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
-                <img src="https://www.svgrepo.com/show/303292/telegram-logo.svg" alt="Telegram Icon">
+                <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
             </a>
         </div>
         <p class="footer-text">Developed by Eng: Amr Mohamed</p>
-    </div>
-
-    <div class="container hidden" id="loading-container">
-        <h2>Loading, please wait...</h2>
-        <div class="loader"></div>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -323,7 +307,7 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
             </a>
             <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
-                <img src="https://www.svgrepo.com/show/303292/telegram-logo.svg" alt="Telegram Icon">
+                <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
             </a>
         </div>
         <p class="video-footer-text">Developed by Eng: Amr Mohamed</p>
@@ -356,24 +340,18 @@
 
                 activeUsers[username] = true;
                 document.getElementById('login-container').classList.add('hidden');
-                document.getElementById('loading-container').classList.remove('hidden');
+                document.getElementById('video-container').classList.remove('hidden');
 
-                // Simulate a loading delay
+                if (username === '45455') {
+                    welcomeContainer.textContent = 'Welcome, Teto 🤩!';
+                } else if (username === '45454') {
+                    welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
+                }
+
+                welcomeContainer.classList.remove('hidden');
                 setTimeout(() => {
-                    document.getElementById('loading-container').classList.add('hidden');
-                    document.getElementById('video-container').classList.remove('hidden');
-
-                    if (username === '45455') {
-                        welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                    } else if (username === '45454') {
-                        welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
-                    }
-
-                    welcomeContainer.classList.remove('hidden');
-                    setTimeout(() => {
-                        welcomeContainer.classList.add('hidden');
-                    }, 7000);
-                }, 2000); // Adjust the delay time as needed
+                    welcomeContainer.classList.add('hidden');
+                }, 7000);  
             } else {
                 alert('Invalid username');
             }
@@ -403,5 +381,3 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
-</body>
-</html>
