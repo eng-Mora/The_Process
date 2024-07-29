@@ -345,12 +345,10 @@
 
                 if (username === '45455') {
                     welcomeContainer.textContent = 'Welcome, Teto 🤩!';
-                    videoHeading.innerHTML = 'The Process platform -
-                    Teto 🤩';
+                    videoHeading.innerHTML = 'The Process platform - Teto 🤩';
                 } else if (username === '45454') {
                     welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
-                    videoHeading.innerHTML = 'The Process platform -
-                    Eng: Mora 🤩';
+                    videoHeading.innerHTML = 'The Process platform - Eng: Mora 🤩';
                 }
 
                 welcomeContainer.classList.remove('hidden');
