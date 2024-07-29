@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-        /* Your existing styles */
+        /* General styles */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -22,7 +22,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             text-align: center;
             width: 100%;
-            max-width: 1000px; /* Increase the max-width to make the container wider */
+            max-width: 1000px;
             transition: background-color 0.5s, color 0.5s;
             overflow-y: auto;
             height: 100vh;
@@ -31,9 +31,9 @@
             width: 160px;
             height: auto;
             margin-bottom: 10px;
-            background-color: #fff; /* Light background for images in light mode */
-            padding: 10px; /* Padding to ensure the background is visible */
-            border-radius: 8px; /* Optional: to match container style */
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
         }
         .container h2, .container h1 {
             margin-bottom: 20px;
@@ -48,14 +48,14 @@
         .container button {
             width: 100%;
             padding: 12px;
-            background-color: #9f54d9; /* Updated color */
+            background-color: #9f54d9;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         .container button:hover {
-            background-color: #8c4aad; /* Slightly darker shade for hover effect */
+            background-color: #8c4aad;
         }
         .hidden {
             display: none;
@@ -84,11 +84,11 @@
         }
         .contact-message {
             font-size: 18px;
-            color: black; /* Default color for light mode */
+            color: black;
             margin-bottom: 10px;
         }
         body.dark-mode .contact-message {
-            color: #f0f0f0; /* Color for dark mode */
+            color: #f0f0f0;
         }
         body.dark-mode {
             background-color: #2c2c2c;
@@ -99,7 +99,7 @@
             color: #f0f0f0;
         }
         body.dark-mode .container img {
-            background-color: #3c3c3c; /* Dark background for images in dark mode */
+            background-color: #3c3c3c;
         }
         body.dark-mode input {
             background-color: #5c5c5c;
@@ -107,51 +107,26 @@
             border: 1px solid #7c7c7c;
         }
         body.dark-mode .container button {
-            background-color: #9f54d9; /* Color for the button in dark mode */
-            color: white; /* Text color for the button */
+            background-color: #9f54d9;
+            color: white;
         }
         body.dark-mode .container button:hover {
-            background-color: #8c4aad; /* Slightly darker shade for hover effect in dark mode */
-        }
-
-        #welcome-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
-            color: #888;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 12px 18px;
-            border-radius: 4px;
-        }
-        body.dark-mode #welcome-container {
-            color: #f0f0f0;
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-        .medallion {
-            width: 180px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-            background-color: #fff; /* Light background for medallion in light mode */
-            padding: 10px; /* Padding to ensure the background is visible */
-            border-radius: 8px; /* Optional: to match container style */
-        }
-        body.dark-mode .medallion {
-            background-color: #3c3c3c; /* Dark background for medallion in dark mode */
+            background-color: #8c4aad;
         }
         .video-container {
-            padding: 10px 0; /* Adjust padding to add space around the title and video */
+            padding: 10px 0;
             position: relative;
-            margin-bottom: 15px; /* Increase margin-bottom for more space between videos */
-            text-align: center; /* Center align the text */
+            margin-bottom: 15px;
+            text-align: center;
         }
         .video-title {
-            font-size: 17px; /* Adjust the font size for the video title */
-            margin-bottom: 10px; /* Add space between the title and the video */
+            font-size: 17px;
+            margin-bottom: 10px;
         }
         .video-container iframe {
-            border-radius: 8px; /* Add border-radius to match the design */
+            border-radius: 8px;
+            width: 100%;
+            max-width: 100%;
         }
         .video-footer-text {
             margin-top: 20px;
@@ -161,7 +136,6 @@
         body.dark-mode .video-footer-text {
             color: #f0f0f0;
         }
-
         .theme-switch-wrapper {
             position: absolute;
             top: 20px;
@@ -169,31 +143,25 @@
             display: flex;
             align-items: center;
         }
-
         .theme-switch {
             display: none;
         }
-
         .theme-switch-label {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
-
         .theme-switch-label .sun-icon,
         .theme-switch-label .moon-icon {
             font-size: 24px;
             transition: opacity 0.5s;
         }
-
         .theme-switch:checked + .theme-switch-label .sun-icon {
             opacity: 0;
         }
-
         .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
             opacity: 0;
         }
-
         .menu-content {
             background-color: #2c2c2c;
             color: white;
@@ -213,23 +181,43 @@
         .menu-button:hover {
             background-color: #45a049;
         }
-
         .menu-content ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-
         .menu-content ul li {
             padding: 10px 15px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .menu-content ul li:hover {
             background-color: #444;
             border-radius: 4px;
         }
+        .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional: Light background for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px; /* Space between icon and name */
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
     </style>
 </head>
 <body>
@@ -254,9 +242,12 @@
     </div>
 
     <div class="container hidden" id="video-container">
+        <div class="user-info">
+            <img id="user-icon" src="" alt="User Icon">
+            <p id="user-name">Username</p>
+        </div>
         <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image" class="medallion">
-        <div id="welcome-container" class="hidden"></div>
-        <h2 id="video-heading">The Process platform - {{username}}</h2>
+        <h2 id="video-heading">The Process platform</h2>
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
         <div id="video-menu" class="menu-content hidden">
             <ul>
@@ -325,8 +316,9 @@
 
         function login() {
             const username = document.getElementById('username').value.trim();
-            const welcomeContainer = document.getElementById('welcome-container');
             const videoHeading = document.getElementById('video-heading');
+            const userIcon = document.getElementById('user-icon');
+            const userName = document.getElementById('user-name');
 
             if (username === '') {
                 alert('Please enter a username.');
@@ -344,17 +336,14 @@
                 document.getElementById('video-container').classList.remove('hidden');
 
                 if (username === '45455') {
-                    welcomeContainer.textContent = 'Welcome, Teto 🤩!';
                     videoHeading.innerHTML = 'The Process platform - Teto 🤩';
+                    userIcon.src = 'https://www.glasgowstudent.net/wp-content/uploads/2013/10/facebook-profile-image.jpg';
+                    userName.textContent = 'Teto';
                 } else if (username === '45454') {
-                    welcomeContainer.textContent = 'Welcome, Eng: Mora 🤩!';
                     videoHeading.innerHTML = 'The Process platform - Eng: Mora 🤩';
+                    userIcon.src = 'https://www.berkshireaerial.com/wp-content/uploads/2019/01/facebook-anon-female-icon.jpg';
+                    userName.textContent = 'Eng: Mora';
                 }
-
-                welcomeContainer.classList.remove('hidden');
-                setTimeout(() => {
-                    welcomeContainer.classList.add('hidden');
-                }, 7000);
             } else {
                 alert('Invalid username');
             }
