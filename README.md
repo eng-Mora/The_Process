@@ -321,7 +321,7 @@
     <script>
         let activeUsers = {};
 
-        function login() {
+      function login() {
             const username = document.getElementById('username').value.trim();
             const videoHeading = document.getElementById('video-heading');
             const userIcon = document.getElementById('user-icon');
@@ -344,11 +344,11 @@
 
                 if (username === '45455') {
                     videoHeading.innerHTML = 'The Process platform - Teto 🤩';
-                    userIcon.src = 'https://www.glasgowstudent.net/wp-content/uploads/2013/10/facebook-profile-image.jpg';
+                    userIcon.src = 'https://api.multiavatar.com/Ebenezer%20Dimmsdale.svg';  // Set Teto's icon
                     userName.textContent = 'Teto';
                 } else if (username === '45454') {
                     videoHeading.innerHTML = 'The Process platform - Eng: Mora 🤩';
-                    userIcon.src = 'https://www.berkshireaerial.com/wp-content/uploads/2019/01/facebook-anon-female-icon.jpg';
+                    userIcon.src = 'https://api.multiavatar.com/Bugzilla.svg';  // Set Eng: Mora's icon
                     userName.textContent = 'Eng: Mora';
                 }
             } else {
