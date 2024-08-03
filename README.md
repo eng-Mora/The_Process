@@ -196,28 +196,28 @@
             border-radius: 4px;
         }
         .user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f9f9f9; /* Optional: Light background for better contrast */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.user-info img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px; /* Space between icon and name */
-}
-
-.user-info p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-}
-
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body.dark-mode .user-info {
+            background-color: #444;
+        }
+        .user-info img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .user-info p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -256,6 +256,7 @@
                 <li onclick="showVideo('video3')">Magd El Qasem - Qasswet Albak</li>
                 <li onclick="showVideo('video4')">Amr Diab - El Ta'ama (Maqsoum Remix)</li>
                 <li onclick="showVideo('video5')">اه يا زمن</li>
+                <li onclick="showVideo('video6')">حصة التأهيل</li>
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
@@ -286,6 +287,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="video6" class="video-container hidden">
+            <h1 class="video-title">حصة التأهيل</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+                <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
             </div>
         </div>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
