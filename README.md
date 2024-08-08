@@ -384,23 +384,23 @@
     </div>
 
     <script>
-        const userDetails = {
-            '35598': { name: 'ادم عمرو', icon: 'https://api.multiavatar.com/Ebenezer%20Dimmsdale.svg' },
-            '21451': { name: 'نور عبدالرحمن', icon: 'https://api.multiavatar.com/Bugzilla.svg' },
-            '35958': { name: 'إيمان', icon: 'https://api.multiavatar.com/Avocado.svg' },
-            '43297': { name: 'محمد ايهاب عبد الفتاح ', icon: 'https://api.multiavatar.com/Jean%20Valjean.svg' },
-            '32011': { name: 'نيفين حمدي محمد', icon: 'https://api.multiavatar.com/Emma%20Watson.svg' },
-            '74626': { name: 'رحمه ماجد', icon: 'https://api.multiavatar.com/Lucas.svg' },
-            '87093': { name: 'حبيبه شعبان محمد', icon: 'https://api.multiavatar.com/Chris%20Evans.svg' },
-            '42776': { name: 'عبدالرحمن شعبان', icon: 'https://api.multiavatar.com/Tony%20Stark.svg' },
-            '57186': { name: 'حنين السيد سليمان', icon: 'https://api.multiavatar.com/Steve%20Rogers.svg' },
-            '82910': { name: 'بسنت محمد', icon: 'https://api.multiavatar.com/Clark%20Kent.svg' },
-            '73697': { name: 'عمر وليد جمال', icon: 'https://api.multiavatar.com/Peter%20Parker.svg' },
-            '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
-            '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
-        };
-            '45454': { name: 'Teto', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
-        };
+    const userDetails = {
+        '35598': { name: 'ادم عمرو', icon: 'https://api.multiavatar.com/Ebenezer%20Dimmsdale.svg' },
+        '21451': { name: 'نور عبدالرحمن', icon: 'https://api.multiavatar.com/Bugzilla.svg' },
+        '35958': { name: 'إيمان', icon: 'https://api.multiavatar.com/Avocado.svg' },
+        '43297': { name: 'محمد ايهاب عبد الفتاح ', icon: 'https://api.multiavatar.com/Jean%20Valjean.svg' },
+        '32011': { name: 'نيفين حمدي محمد', icon: 'https://api.multiavatar.com/Emma%20Watson.svg' },
+        '74626': { name: 'رحمه ماجد', icon: 'https://api.multiavatar.com/Lucas.svg' },
+        '87093': { name: 'حبيبه شعبان محمد', icon: 'https://api.multiavatar.com/Chris%20Evans.svg' },
+        '42776': { name: 'عبدالرحمن شعبان', icon: 'https://api.multiavatar.com/Tony%20Stark.svg' },
+        '57186': { name: 'حنين السيد سليمان', icon: 'https://api.multiavatar.com/Steve%20Rogers.svg' },
+        '82910': { name: 'بسنت محمد', icon: 'https://api.multiavatar.com/Clark%20Kent.svg' },
+        '73697': { name: 'عمر وليد جمال', icon: 'https://api.multiavatar.com/Peter%20Parker.svg' },
+        '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
+        '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' },
+        '45454': { name: 'Teto', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
+    };
+</script>
 
         const activeUsers = {}; // Define activeUsers
 
