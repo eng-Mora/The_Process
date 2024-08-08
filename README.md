@@ -399,6 +399,8 @@
             '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
             '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
         };
+'45454': { name: 'Teto', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
+        };
 
         const activeUsers = {}; // Define activeUsers
 
