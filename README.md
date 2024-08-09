@@ -27,7 +27,7 @@
         max-width: 1000px;
         transition: background-color 0.5s, color 0.5s;
         overflow-y: auto; /* Enable vertical scrolling */
-        max-height: 80vh; /* Adjusted to be taller */
+        max-height: 90vh; /* Limit the height to fit in the viewport */
     }
 
     .container img {
@@ -191,7 +191,7 @@
         position: relative;
         margin-bottom: 15px;
         text-align: center;
-        max-height: 80vh; /* Adjusted to be taller */
+        max-height: 70vh; /* Limit the height to fit in the viewport */
         overflow: auto; /* Enable scrolling if content overflows */
     }
 
@@ -315,6 +315,7 @@
         font-weight: bold;
     }
 </style>
+
 </head>
 <body>
     <div class="container" id="login-container">
@@ -352,12 +353,12 @@
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
-            <h1 class="video-title">حصة التأهيل</h1>
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-                <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-            </div>
-            <iframe src="https://drive.google.com/file/d/16YuK8K7SUWaVGd_d1ac4Fo8PS1vl3Pls/preview" width="800" height="600" allow="autoplay" scrolling="no"></iframe>
-        </div>
+    <h1 class="video-title">حصة التأهيل</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+        <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+    <iframe src="https://drive.google.com/file/d/16YuK8K7SUWaVGd_d1ac4Fo8PS1vl3Pls/preview" width="800" height="600" allow="autoplay" scrolling="no"></iframe>
+</div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
@@ -398,6 +399,8 @@
             '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
             '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' },
             '45454': { name: 'teto', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
+
+            
         };
 
         const activeUsers = {}; // Define activeUsers
