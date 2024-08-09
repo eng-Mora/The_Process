@@ -209,7 +209,7 @@
 
     .video-footer-text {
         margin-top: 5px;
-        font-size: 19px;
+        font-size: 16px;
         color: #888;
     }
 
