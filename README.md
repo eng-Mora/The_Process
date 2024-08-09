@@ -348,7 +348,7 @@
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
         <div id="video-menu" class="menu-content hidden">
             <ul>
-                <li onclick="showVideo('video1')">حل واجب حصة 1</li>
+                <li onclick="showVideo('video1')">حل واجب حصة 1 </li>
                 
             </ul>
         </div>
