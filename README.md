@@ -348,16 +348,16 @@
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
         <div id="video-menu" class="menu-content hidden">
             <ul>
-                <li onclick="showVideo('video1')">حصة التأهيل</li>
+                <li onclick="showVideo('video1')">حل واجب حصة 1</li>
                 
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
-    <h1 class="video-title">حصة التأهيل</h1>
+    <h1 class="video-title">حل واجب حصة 1</h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-        <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-    </div>
-    <iframe src="https://drive.google.com/file/d/16YuK8K7SUWaVGd_d1ac4Fo8PS1vl3Pls/preview" width="800" height="600" allow="autoplay" scrolling="no"></iframe>
+<iframe src="https://drive.google.com/file/d/1iiNJqMrDUKkTptUQVymPbMqEyf0UowBB/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+<iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
 </div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
