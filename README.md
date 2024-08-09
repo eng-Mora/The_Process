@@ -19,34 +19,34 @@
 
     .container {
         background-color: white;
-        padding: 40px; /* Increased padding */
+        padding: 30px;
         border-radius: 8px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Increased shadow */
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
         text-align: center;
         width: 100%;
-        max-width: 1200px; /* Increased width */
+        max-width: 1000px;
         transition: background-color 0.5s, color 0.5s;
         overflow-y: auto; /* Enable vertical scrolling */
-        max-height: 90vh; /* Keep the height limit */
+        max-height: 90vh; /* Limit the height to fit in the viewport */
     }
 
     .container img {
-        width: 200px; /* Increased image width */
+        width: 160px;
         height: auto;
-        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 10px;
         background-color: #fff;
         padding: 10px;
         border-radius: 8px;
     }
 
     .container h2, .container h1 {
-        margin-bottom: 30px; /* Increased margin */
+        margin-bottom: 20px;
     }
 
     .container input {
         width: 100%;
-        padding: 15px; /* Increased padding */
-        margin: 15px 0; /* Increased margin */
+        padding: 12px;
+        margin: 12px 0;
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
@@ -54,7 +54,7 @@
 
     .container button {
         width: 100%;
-        padding: 15px; /* Increased padding */
+        padding: 12px;
         background-color: #9f54d9;
         color: white;
         border: none;
@@ -129,29 +129,29 @@
     }
 
     .footer-text {
-        margin-top: 30px; /* Increased margin */
-        font-size: 18px; /* Increased font size */
+        margin-top: 20px;
+        font-size: 16px;
         color: #888;
     }
 
     .contact-icons {
-        margin-top: 20px; /* Increased margin */
+        margin-top: 10px;
     }
 
     .contact-icons a {
         display: inline-block;
-        margin: 0 15px; /* Increased margin */
+        margin: 0 10px;
     }
 
     .contact-icons img {
-        width: 40px; /* Increased icon size */
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
 
     .contact-message {
-        font-size: 20px; /* Increased font size */
+        font-size: 18px;
         color: black;
-        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 10px;
     }
 
     body.dark-mode .contact-message {
@@ -187,29 +187,29 @@
     }
 
     .video-container {
-        padding: 20px 0; /* Increased padding */
+        padding: 10px 0;
         position: relative;
-        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 15px;
         text-align: center;
-        max-height: 80vh; /* Increased height limit */
+        max-height: 70vh; /* Limit the height to fit in the viewport */
         overflow: auto; /* Enable scrolling if content overflows */
     }
 
     .video-title {
-        font-size: 22px; /* Increased font size */
-        margin-bottom: 15px; /* Increased margin */
+        font-size: 17px;
+        margin-bottom: 10px;
     }
 
     .video-container iframe {
         border-radius: 8px;
         width: 100%;
         height: auto;
-        max-height: 80vh; /* Increased height limit */
+        max-height: 100%;
     }
 
     .video-footer-text {
-        margin-top: 10px; /* Increased margin */
-        font-size: 22px; /* Increased font size */
+        margin-top: 5px;
+        font-size: 16px;
         color: #888;
     }
 
@@ -252,19 +252,19 @@
     .menu-content {
         background-color: #2c2c2c;
         color: white;
-        padding: 15px; /* Increased padding */
+        padding: 10px;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .menu-button {
         background-color: #4CAF50;
         color: white;
         border: none;
-        padding: 15px 25px; /* Increased padding */
+        padding: 10px 20px;
         cursor: pointer;
         border-radius: 4px;
-        margin-bottom: 20px; /* Increased margin */
+        margin-bottom: 20px;
     }
 
     .menu-button:hover {
@@ -278,7 +278,7 @@
     }
 
     .menu-content ul li {
-        padding: 15px 20px; /* Increased padding */
+        padding: 10px 15px;
         cursor: pointer;
         transition: background-color 0.3s;
     }
@@ -291,11 +291,11 @@
     .user-info {
         display: flex;
         align-items: center;
-        margin-bottom: 30px; /* Increased margin */
-        padding: 15px; /* Increased padding */
+        margin-bottom: 20px;
+        padding: 10px;
         background-color: #f9f9f9;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     body.dark-mode .user-info {
@@ -304,17 +304,18 @@
 
     .user-info img {
         border-radius: 50%;
-        width: 60px; /* Increased size */
-        height: 60px;
-        margin-right: 20px; /* Increased margin */
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
     }
 
     .user-info p {
         margin: 0;
-        font-size: 18px; /* Increased font size */
+        font-size: 16px;
         font-weight: bold;
     }
 </style>
+
 </head>
 <body>
     <div class="container" id="login-container">
@@ -352,12 +353,12 @@
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
-            <h1 class="video-title">حصة التأهيل</h1>
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-                <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-            </div>
-            <iframe src="https://drive.google.com/file/d/16YuK8K7SUWaVGd_d1ac4Fo8PS1vl3Pls/preview" width="100%" height="100%" allow="autoplay" scrolling="no"></iframe>
-        </div>
+    <h1 class="video-title">حصة التأهيل</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+        <iframe src="https://drive.google.com/file/d/1mwmNKYtvwn318OhJEIC6nFOHnaOCr1ne/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+    <iframe src="https://drive.google.com/file/d/16YuK8K7SUWaVGd_d1ac4Fo8PS1vl3Pls/preview" width="800" height="600" allow="autoplay" scrolling="no"></iframe>
+</div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
@@ -398,6 +399,8 @@
             '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
             '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' },
             '45454': { name: 'teto', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
+
+            
         };
 
         const activeUsers = {}; // Define activeUsers
@@ -451,3 +454,4 @@
 
         document.getElementById('theme-switch').addEventListener('change', toggleDarkMode);
     </script>
+
