@@ -15,6 +15,7 @@
             background-color: #f0f0f0;
             margin: 0;
             overflow: hidden; /* Prevent scrolling on the body */
+            position: relative; /* Ensure footer positioning is relative to body */
         }
 
         .container {
@@ -130,9 +131,15 @@
         }
 
         .footer-text {
-            margin-top: 20px;
-            font-size: 16px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
             color: #888;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .contact-icons {
@@ -319,23 +326,10 @@
 </head>
 <body>
     <div class="container" id="login-container">
-        <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image">
-        <h2>The Process platform</h2>
-        <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
+        <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Logo">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
-        <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
-            </a>
-            <a href="https://wa.me/message/5LRM2DVHPZQFM1" target="_blank" title="WhatsApp">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            </a>
-            <a href="http://t.me/Mora_mo1" target="_blank" title="Telegram">
-                <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
-            </a>
-        </div>
-        <p class="footer-text">Developed by Eng: Amr Mohamed</p>
     </div>
 
     <div class="container hidden" id="video-container">
@@ -370,7 +364,6 @@
                 <img src="https://i.ibb.co/9TGmH7c/cropped-image.png" alt="Telegram Icon">
             </a>
         </div>
-        <p class="video-footer-text">Developed by Eng: Amr Mohamed</p>
     </div>
 
     <div class="theme-switch-wrapper">
@@ -380,6 +373,8 @@
             <span class="sun-icon">🌞</span>
         </label>
     </div>
+
+    <div class="footer-text">Developed by Eng: Amr Mohamed</div>
 
     <script>
         const userDetails = {
