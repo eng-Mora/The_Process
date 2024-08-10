@@ -6,18 +6,6 @@
     <style>
     /* General styles */
     body {
-  
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #302967; /* Updated background color */
-    margin: 0;
-    transition: background-color 0.5s, color 0.5s;
-    overflow: hidden; /* Prevent scrolling on the body */
-}
-{
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
@@ -457,6 +445,4 @@
 
         document.getElementById('theme-switch').addEventListener('change', toggleDarkMode);
     </script>
-
-
 
