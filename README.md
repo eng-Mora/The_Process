@@ -384,20 +384,14 @@
 
     <script>
         const userDetails = {
-            '35598': { name: 'ادم عمرو', icon: 'https://api.multiavatar.com/Ebenezer%20Dimmsdale.svg' },
-            '21451': { name: 'نور عبدالرحمن', icon: 'https://api.multiavatar.com/Bugzilla.svg' },
-            '35958': { name: 'إيمان', icon: 'https://api.multiavatar.com/Avocado.svg' },
-            '43297': { name: 'محمد ايهاب عبد الفتاح ', icon: 'https://api.multiavatar.com/Jean%20Valjean.svg' },
-            '32011': { name: 'نيفين حمدي محمد', icon: 'https://api.multiavatar.com/Emma%20Watson.svg' },
-            '74626': { name: 'رحمه ماجد', icon: 'https://api.multiavatar.com/Lucas.svg' },
-            '45454': { name: 'teto', icon: 'https://api.multiavatar.com/Lucas.svg' },
-            '87093': { name: 'حبيبه شعبان محمد', icon: 'https://api.multiavatar.com/Chris%20Evans.svg' },
-            '42776': { name: 'عبدالرحمن شعبان', icon: 'https://api.multiavatar.com/Tony%20Stark.svg' },
-            '57186': { name: 'حنين السيد سليمان', icon: 'https://api.multiavatar.com/Steve%20Rogers.svg' },
-            '82910': { name: 'بسنت محمد', icon: 'https://api.multiavatar.com/Clark%20Kent.svg' },
-            '73697': { name: 'عمر وليد جمال', icon: 'https://api.multiavatar.com/Peter%20Parker.svg' },
-            '45043': { name: 'عبدالله احمد محمود', icon: 'https://api.multiavatar.com/Wade%20Wilson.svg' },
-            '42601': { name: 'حاتم امين محمد', icon: 'https://api.multiavatar.com/Leonardo%20DiCaprio.svg' }
+            '82128': { name: 'زياد إيهاب', icon: 'https://api.multiavatar.com/f84f24bcc7b72eebf0.svg'},
+            '89303': { name: 'حمدي محمد ', icon: 'https://api.multiavatar.com/9b840c355db11594e1.svg' },
+            '80546': { name: 'مازن احمد ', icon: 'https://api.multiavatar.com/94a0dd6577ca3c7291.svg' },
+            '32546': { name: 'لوجين وائل ', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg' },
+            '23756': { name: 'ضحى محمد', icon: 'https://api.multiavatar.com/2422f12d6e1bb1d40b.svg' },
+            '54620': { name: 'سلمى سامح', icon: 'https://api.multiavatar.com/e736fdd76d2f8bb555.svg' },
+            '67084': { name: 'هنا سعد', icon: 'https://api.multiavatar.com/12de69a625c83e5ca8.svg' },
+            '45454': { name: 'Teto', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg' }
         };
 
         const activeUsers = {}; // Define activeUsers
