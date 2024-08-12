@@ -141,7 +141,7 @@
     }
 
     .footer-text {
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 16px;
         color: #888;
     }
