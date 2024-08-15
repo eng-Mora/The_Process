@@ -5,25 +5,13 @@
     <title>Login and Video Page</title>
     <style>
     /* General styles */
-   body {
-  
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #302967; /* Updated background color */
-    margin: 0;
-    transition: background-color 0.5s, color 0.5s;
-    overflow: hidden; /* Prevent scrolling on the body */
-}
-{
+    body {
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f0f0f0;
+        background-color: #302967; /* Updated background color */
         margin: 0;
         transition: background-color 0.5s, color 0.5s;
         overflow: hidden; /* Prevent scrolling on the body */
@@ -327,13 +315,12 @@
         font-weight: bold;
     }
 </style>
-
 </head>
 <body>
     <div class="container" id="login-container">
         <img src="https://i.ibb.co/G2dH87P/Clipped-image-20240718-232638.png" alt="Medal Image">
         <h2>The Process platform</h2>
-        <input type="text" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
+        <input type="password" id="username" placeholder="Enter Username" onkeydown="handleEnterKey(event)">
         <button onclick="login()">Login</button>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
@@ -361,16 +348,15 @@
         <div id="video-menu" class="menu-content hidden">
             <ul>
                 <li onclick="showVideo('video1')">حل واجب حصة 1 </li>
-                
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
-    <h1 class="video-title">حل واجب حصة 1</h1>
-    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1iiNJqMrDUKkTptUQVymPbMqEyf0UowBB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
-<iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
-</div>
-
-
+            <h1 class="video-title">حل واجب حصة 1</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+                <iframe src="https://drive.google.com/file/d/1iiNJqMrDUKkTptUQVymPbMqEyf0UowBB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+            </div>
+            <iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
@@ -457,3 +443,4 @@
 
         document.getElementById('theme-switch').addEventListener('change', toggleDarkMode);
     </script>
+
