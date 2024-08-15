@@ -4,317 +4,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Video Page</title>
     <style>
-    /* General styles */
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #302967; /* Updated background color */
-        margin: 0;
-        transition: background-color 0.5s, color 0.5s;
-        overflow: hidden; /* Prevent scrolling on the body */
-    }
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #302967; /* Updated background color */
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+            overflow: hidden; /* Prevent scrolling on the body */
+        }
 
-    .container {
-        background-color: white;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        text-align: center;
-        width: 100%;
-        max-width: 1000px;
-        transition: background-color 0.5s, color 0.5s;
-        overflow-y: auto; /* Enable vertical scrolling */
-        max-height: 90vh; /* Limit the height to fit in the viewport */
-    }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 1000px;
+            transition: background-color 0.5s, color 0.5s;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 90vh; /* Limit the height to fit in the viewport */
+        }
 
-    .container img {
-        width: 160px;
-        height: auto;
-        margin-bottom: 10px;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 8px;
-    }
+        .container img {
+            width: 160px;
+            height: auto;
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-    .container h2, .container h1 {
-        margin-bottom: 20px;
-    }
+        .container h2, .container h1 {
+            margin-bottom: 20px;
+        }
 
-    .container input {
-        width: 100%;
-        padding: 12px;
-        margin: 12px 0;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+        .container input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-    .container button {
-        width: 100%;
-        padding: 12px;
-        background-color: #9f54d9;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.3s, transform 0.3s;
-    }
+        .container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #9f54d9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-    .container button:before,
-    .container button:after,
-    .container button .button_reflection-1,
-    .container button .button_reflection-2,
-    .container button .button_circle-2 {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.3);
-        transition: all 0.3s ease;
-    }
+        .container button:hover {
+            background-color: #8c4aad;
+            transform: scale(1.05);
+        }
 
-    .container button:before {
-        left: -120%;
-        transform: skewX(-30deg);
-    }
+        .hidden {
+            display: none;
+        }
 
-    .container button:after {
-        left: 100%;
-        transform: skewX(30deg);
-    }
+        .icon {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-    .container button:hover:before {
-        left: 100%;
-    }
+        .footer-text {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #888;
+        }
 
-    .container button:hover:after {
-        left: -100%;
-    }
+        .contact-icons {
+            margin-top: 10px;
+        }
 
-    .container button:hover {
-        transform: rotate(-4deg) scale(1.1);
-    }
+        .contact-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
 
-    .container button .button_reflection-1 {
-        left: 120%;
-    }
+        .contact-icons img {
+            width: 30px;
+            height: 30px;
+        }
 
-    .container button .button_reflection-2 {
-        left: -70%;
-    }
+        .contact-message {
+            font-size: 18px;
+            color: black;
+            margin-bottom: 10px;
+        }
 
-    .container button:hover .button_circle-2 {
-        transform: translate(-20px, 20px) scale(1.1);
-    }
+        body.dark-mode .contact-message {
+            color: #f0f0f0;
+        }
 
-    .container button.button_diamond:hover {
-        transform: translateY(7px) rotate(-24deg) scale(1.1);
-    }
+        body.dark-mode {
+            background-color: #2c2c2c;
+            color: #f0f0f0;
+        }
 
-    .hidden {
-        display: none;
-    }
+        body.dark-mode .container {
+            background-color: #3c3c3c;
+            color: #f0f0f0;
+        }
 
-    .icon {
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
+        body.dark-mode .container img {
+            background-color: #3c3c3c;
+        }
 
-    .footer-text {
-        margin-top: 10px;
-        font-size: 16px;
-        color: #888;
-    }
+        body.dark-mode input {
+            background-color: #5c5c5c;
+            color: #f0f0f0;
+            border: 1px solid #7c7c7c;
+        }
 
-    .contact-icons {
-        margin-top: 10px;
-    }
+        body.dark-mode .container button {
+            background-color: #8c4aad;
+        }
 
-    .contact-icons a {
-        display: inline-block;
-        margin: 0 10px;
-    }
+        body.dark-mode .container button:hover {
+            background-color: #9f54d9;
+        }
 
-    .contact-icons img {
-        width: 30px;
-        height: 30px;
-    }
+        .video-container {
+            padding: 10px 0;
+            position: relative;
+            margin-bottom: 15px;
+            text-align: center;
+            max-height: 70vh; /* Limit the height to fit in the viewport */
+            overflow: auto; /* Enable scrolling if content overflows */
+        }
 
-    .contact-message {
-        font-size: 18px;
-        color: black;
-        margin-bottom: 10px;
-    }
+        .video-title {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
 
-    body.dark-mode .contact-message {
-        color: #f0f0f0;
-    }
+        .video-container iframe {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
 
-    body.dark-mode {
-        background-color: #2c2c2c;
-        color: #f0f0f0;
-    }
+        .video-footer-text {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #888;
+        }
 
-    body.dark-mode .container {
-        background-color: #3c3c3c;
-        color: #f0f0f0;
-    }
+        body.dark-mode .video-footer-text {
+            color: #f0f0f0;
+        }
 
-    body.dark-mode .container img {
-        background-color: #3c3c3c;
-    }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
 
-    body.dark-mode input {
-        background-color: #5c5c5c;
-        color: #f0f0f0;
-        border: 1px solid #7c7c7c;
-    }
+        .theme-switch {
+            display: none;
+        }
 
-    body.dark-mode .container button {
-        background-color: #8c4aad;
-    }
+        .theme-switch-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
 
-    body.dark-mode .container button:hover {
-        background-color: #9f54d9;
-    }
+        .theme-switch-label .sun-icon,
+        .theme-switch-label .moon-icon {
+            font-size: 24px;
+            transition: opacity 0.5s;
+        }
 
-    .video-container {
-        padding: 10px 0;
-        position: relative;
-        margin-bottom: 15px;
-        text-align: center;
-        max-height: 70vh; /* Limit the height to fit in the viewport */
-        overflow: auto; /* Enable scrolling if content overflows */
-    }
+        .theme-switch:checked + .theme-switch-label .sun-icon {
+            opacity: 0;
+        }
 
-    .video-title {
-        font-size: 17px;
-        margin-bottom: 10px;
-    }
+        .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
+            opacity: 0;
+        }
 
-    .video-container iframe {
-        border-radius: 8px;
-        width: 100%;
-        height: auto;
-        max-height: 100%;
-    }
+        .menu-content {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .video-footer-text {
-        margin-top: 5px;
-        font-size: 16px;
-        color: #888;
-    }
+        .menu-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
 
-    body.dark-mode .video-footer-text {
-        color: #f0f0f0;
-    }
+        .menu-button:hover {
+            background-color: #45a049;
+        }
 
-    .theme-switch-wrapper {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-    }
+        .menu-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    .theme-switch {
-        display: none;
-    }
+        .menu-content ul li {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    .theme-switch-label {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
+        .menu-content ul li:hover {
+            background-color: #444;
+            border-radius: 4px;
+        }
 
-    .theme-switch-label .sun-icon,
-    .theme-switch-label .moon-icon {
-        font-size: 24px;
-        transition: opacity 0.5s;
-    }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .theme-switch:checked + .theme-switch-label .sun-icon {
-        opacity: 0;
-    }
+        body.dark-mode .user-info {
+            background-color: #444;
+        }
 
-    .theme-switch:not(:checked) + .theme-switch-label .moon-icon {
-        opacity: 0;
-    }
+        .user-info img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
 
-    .menu-content {
-        background-color: #2c2c2c;
-        color: white;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-        margin-bottom: 20px;
-    }
-
-    .menu-button:hover {
-        background-color: #45a049;
-    }
-
-    .menu-content ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .menu-content ul li {
-        padding: 10px 15px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .menu-content ul li:hover {
-        background-color: #444;
-        border-radius: 4px;
-    }
-
-    .user-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    body.dark-mode .user-info {
-        background-color: #444;
-    }
-
-    .user-info img {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
-    }
-
-    .user-info p {
-        margin: 0;
-        font-size: 16px;
-        font-weight: bold;
-    }
-</style>
+        .user-info p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container" id="login-container">
@@ -419,6 +372,9 @@
                 videoHeading.innerHTML = 'The Process platform';
                 userIcon.src = userDetail.icon;  // Set user's icon
                 userName.textContent = userDetail.name;  // Set user's name
+
+                // Replace numeric username with a placeholder or masked string
+                document.getElementById('username').value = '********'; 
             } else {
                 alert('Invalid username');
             }
@@ -443,4 +399,3 @@
 
         document.getElementById('theme-switch').addEventListener('change', toggleDarkMode);
     </script>
-
