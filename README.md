@@ -394,12 +394,39 @@
 
     <script>
         const userDetails = {
+            'admin': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
+
+            '16840': { name: 'سما ابراهيم', icon: 'https://api.multiavatar.com/e736fdd76d2f8bb555.svg'},
+            '15032': { name: 'تسنيم محمد', icon: 'https://api.multiavatar.com/1eae35ecc479f6edd1.svg'},
+            '88105': { name: 'سندي عصام', icon: 'https://api.multiavatar.com/9b8b2ae7d917ccd9ce.svg'},
+            '72137': { name: 'رودينا ايمن', icon: 'https://api.multiavatar.com/240315fc1890fd05ae.svg'},
+            '80135': { name: 'محمد اشرف', icon: 'https://api.multiavatar.com/f84f24bcc7b72eebf0.svg'},
+            '28126': { name: 'يوسف محمد', icon: 'https://api.multiavatar.com/9b840c355db11594e1.svg'},
+            '56193': { name: 'حبيبة محمد', icon: 'https://api.multiavatar.com/19b4a93ea61f0b650e.svg'},
+            '75516': { name: 'حنين مصطفى', icon: 'https://api.multiavatar.com/ad62e7d97f6967fc85.svg'},
+            '53336': { name: 'مريم اشرف', icon: 'https://api.multiavatar.com/2969b18bac7b3cec76.svg'},
+            '48389': { name: 'سندس صلاح', icon: 'https://api.multiavatar.com/36aa46f54891ced0b5.svg'},
+            '28354': { name: 'مريم احمد', icon: 'https://api.multiavatar.com/cd15833a17efc52a72.svg'},
+            '75539': { name: 'جنة طارق', icon: 'https://api.multiavatar.com/eb9203245d22ab2c3f.svg'},
+            '58951': { name: 'سارة عماد', icon: 'https://api.multiavatar.com/9447fc5ea452de05be.svg'},
+            '89089': { name: 'جنة محمد', icon: 'https://api.multiavatar.com/9359ac6f0b88e61eb6.svg'},
+            '41292': { name: 'مريم سعيد', icon: 'https://api.multiavatar.com/2947fd65b9978407f2.svg'},
+            '32859': { name: 'مريم عاطف', icon: 'https://api.multiavatar.com/1b103906df1bff448d.svg'},
+            '44746': { name: 'سعيد سعد', icon: 'https://api.multiavatar.com/94a0dd6577ca3c7291.svg'},
+            '30223': { name: 'سيف الدين تامر', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg'},
+            '21428': { name: 'محمد احمد', icon: 'https://api.multiavatar.com/Guadalajara.svg'},
+            '17846': { name: 'عبدالرحمن محمود', icon: 'https://api.multiavatar.com/ba66683f68073901ea.svg'},
+            '20608': { name: 'زياد احمد', icon: 'https://api.multiavatar.com/4db29acccc604fe610.svg'},
+            '48392': { name: 'عمار اشرف', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
+            '16075': { name: 'امنية ايمن ', icon: 'https://api.multiavatar.com/a1b9a98b131af9380c.svg'},
+            '69897': { name: 'اروى احمد', icon: 'https://api.multiavatar.com/e71c17c25671802202.svg'},
+            
+            
             '82128': { name: 'زياد إيهاب', icon: 'https://api.multiavatar.com/f84f24bcc7b72eebf0.svg'},
             '89303': { name: 'حمدي محمد ', icon: 'https://api.multiavatar.com/9b840c355db11594e1.svg' },
             '80546': { name: 'مازن احمد ', icon: 'https://api.multiavatar.com/94a0dd6577ca3c7291.svg' },
             '32546': { name: 'لوجين وائل ', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg' },
             '23756': { name: 'ضحى محمد', icon: 'https://api.multiavatar.com/2422f12d6e1bb1d40b.svg' },
-            '5': { name: 'سلمى سامح', icon: 'https://api.multiavatar.com/e736fdd76d2f8bb555.svg' },
             '67084': { name: 'هنا سعد', icon: 'https://api.multiavatar.com/12de69a625c83e5ca8.svg' },
             '99': { name: 'Teto', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg' }
         };
