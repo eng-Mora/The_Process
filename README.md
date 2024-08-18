@@ -396,6 +396,11 @@
         const userDetails = {
             'admin': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
             
+            '73057': { name: 'عمر هاني', icon: 'https://api.multiavatar.com/5423b44a5f0baed737.svg'},
+            '63855': { name: 'عبدالرحمن محمود عبدالحسيب', icon: 'https://api.multiavatar.com/f0a9ab062cd811e549.svg'},
+
+            
+            
             '80650': { name: 'احمد ايمن رأفت', icon: 'https://api.multiavatar.com/5504deeeaae32c00b6.svg'},
             '23069': { name: 'يوسف حسن ', icon: 'https://api.multiavatar.com/76d730110bb25b52e5.svg'},
             '66908': { name: 'احمد محمد عبداللطيف', icon: 'https://api.multiavatar.com/c91bc1e60640f2bd7a.svg'},
