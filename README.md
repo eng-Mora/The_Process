@@ -398,17 +398,11 @@
             
             '73057': { name: 'عمر هاني', icon: 'https://api.multiavatar.com/5423b44a5f0baed737.svg'},
             '63855': { name: 'عبدالرحمن محمود عبدالحسيب', icon: 'https://api.multiavatar.com/f0a9ab062cd811e549.svg'},
-
-            
-            
             '80650': { name: 'احمد ايمن رأفت', icon: 'https://api.multiavatar.com/5504deeeaae32c00b6.svg'},
             '23069': { name: 'يوسف حسن ', icon: 'https://api.multiavatar.com/76d730110bb25b52e5.svg'},
             '66908': { name: 'احمد محمد عبداللطيف', icon: 'https://api.multiavatar.com/c91bc1e60640f2bd7a.svg'},
             '69756': { name: 'احمد ياسر', icon: 'https://api.multiavatar.com/e60abda884983d5404.svg'},
             '70126': { name: 'مازن محمد', icon: 'https://api.multiavatar.com/988a824d7b64800149.svg'},
-        
-
-
             '16840': { name: 'سما ابراهيم', icon: 'https://api.multiavatar.com/e736fdd76d2f8bb555.svg'},
             '15032': { name: 'تسنيم محمد', icon: 'https://api.multiavatar.com/1eae35ecc479f6edd1.svg'},
             '88105': { name: 'سندي عصام', icon: 'https://api.multiavatar.com/9b8b2ae7d917ccd9ce.svg'},
@@ -432,8 +426,6 @@
             '48392': { name: 'عمار اشرف', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '16075': { name: 'امنية ايمن ', icon: 'https://api.multiavatar.com/a1b9a98b131af9380c.svg'},
             '69897': { name: 'اروى احمد', icon: 'https://api.multiavatar.com/e71c17c25671802202.svg'},
-            
-            
             '82128': { name: 'زياد إيهاب', icon: 'https://api.multiavatar.com/f84f24bcc7b72eebf0.svg'},
             '89303': { name: 'حمدي محمد ', icon: 'https://api.multiavatar.com/9b840c355db11594e1.svg' },
             '80546': { name: 'مازن احمد ', icon: 'https://api.multiavatar.com/94a0dd6577ca3c7291.svg' },
@@ -443,7 +435,7 @@
             '99': { name: 'Teto', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg' }
         };
 
-        const activeUsers = {}; // Define activeUsers
+        const activeUsers = {};
 
         function login() {
             const username = document.getElementById('username').value.trim();
