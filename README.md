@@ -415,7 +415,7 @@
             '53336': { name: 'مريم اشرف', icon: 'https://api.multiavatar.com/2969b18bac7b3cec76.svg'},
             '48389': { name: 'سندس صلاح', icon: 'https://api.multiavatar.com/36aa46f54891ced0b5.svg'},
             '28354': { name: 'مريم احمد', icon: 'https://api.multiavatar.com/cd15833a17efc52a72.svg'},
-            '75539': { name: 'جنة طارق', icon: 'https://api.multiavatar.com/eb9203245d22ab2c3f.svg'},
+            '75539': { name: 'جنى طارق', icon: 'https://api.multiavatar.com/eb9203245d22ab2c3f.svg'},
             '58951': { name: 'سارة عماد', icon: 'https://api.multiavatar.com/9447fc5ea452de05be.svg'},
             '89089': { name: 'جنة محمد', icon: 'https://api.multiavatar.com/9359ac6f0b88e61eb6.svg'},
             '41292': { name: 'مريم سعيد', icon: 'https://api.multiavatar.com/2947fd65b9978407f2.svg'},
