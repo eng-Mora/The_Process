@@ -360,6 +360,8 @@
         <div id="video-menu" class="menu-content hidden">
             <ul>
                 <li onclick="showVideo('video1')">حل واجب حصة 1 </li>
+                <li onclick="showVideo('video2')">حل واجب حصة 2</li>
+
             </ul>
         </div>
         <div id="video1" class="video-container hidden">
@@ -369,6 +371,14 @@
             </div>
             <iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
         </div>
+        <div id="video2" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 1</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1kv5eqpNmC_X2ByBbfoLcXn6WUnA0eYVB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+            </div>
+            <iframe src="https://drive.google.com/file/d/1Qb7N0TRJ8Cj4gkZ2nK9ZhSgAp7NC6636/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+
+
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
@@ -394,7 +404,7 @@
 
     <script>
         const userDetails = {
-            'mora': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
+            'mora mo': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
             
             '28411': { name: 'رحيق سيد', icon: 'https://api.multiavatar.com/098db318e1715a48dd.svg'},
             '73057': { name: 'عمر هاني', icon: 'https://api.multiavatar.com/5423b44a5f0baed737.svg'},
