@@ -406,6 +406,10 @@
         const userDetails = {
             'mora mo': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
             
+            '50808': { name: 'احمد حسين', icon: 'https://api.multiavatar.com/390264ffe38ec2ed41.svg'},
+            '84536': { name: 'زياد خالد', icon: 'https://api.multiavatar.com/4a955a93363ada217b.svg'},
+            '41596': { name: 'نورالدين هيثم', icon: 'https://api.multiavatar.com/cbfb555bf65d9c5b93.svg'},
+            '11633': { name: 'يوسف ايمن ابوضيف', icon: 'https://api.multiavatar.com/f4fd82c786f12ce4c0.svg'},
             '28411': { name: 'رحيق سيد', icon: 'https://api.multiavatar.com/098db318e1715a48dd.svg'},
             '73057': { name: 'عمر هاني', icon: 'https://api.multiavatar.com/5423b44a5f0baed737.svg'},
             '63855': { name: 'عبدالرحمن محمود عبدالحسيب', icon: 'https://api.multiavatar.com/f0a9ab062cd811e549.svg'},
