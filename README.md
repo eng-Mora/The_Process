@@ -315,12 +315,11 @@
     }
 
     .user-info img {
-    border-radius: 8px; /* Change this to adjust the roundness of the corners */
-    width: 100px; /* Set the desired width */
-    height: 100px; /* Set the desired height to make it a square */
-    margin-right: 15px;
-    object-fit: cover; /* Ensure the image fits the square */
-}
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
 
 
     .user-info p {
