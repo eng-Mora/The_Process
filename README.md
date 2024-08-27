@@ -315,11 +315,13 @@
     }
 
     .user-info img {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
-    }
+    border-radius: 8px; /* Change this to adjust the roundness of the corners */
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height to make it a square */
+    margin-right: 15px;
+    object-fit: cover; /* Ensure the image fits the square */
+}
+
 
     .user-info p {
         margin: 0;
@@ -404,7 +406,7 @@
 
     <script>
         const userDetails = {
-            'mora mo': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
+            'mora mo': { name: 'administrator', icon: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=administrator%20:mora'},
             
             '50808': { name: 'احمد حسين', icon: 'https://api.multiavatar.com/390264ffe38ec2ed41.svg'},
             '84536': { name: 'زياد خالد', icon: 'https://api.multiavatar.com/4a955a93363ada217b.svg'},
