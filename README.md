@@ -405,7 +405,7 @@
 
     <script>
         const userDetails = {
-            'mora mo': { name: 'administrator', icon: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=administrator%20:mora'},
+            'mora mo': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
             
             '50808': { name: 'احمد حسين', icon: 'https://api.multiavatar.com/390264ffe38ec2ed41.svg'},
             '84536': { name: 'زياد خالد', icon: 'https://api.multiavatar.com/4a955a93363ada217b.svg'},
