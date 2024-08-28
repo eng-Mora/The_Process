@@ -418,6 +418,7 @@
             '23069': { name: 'يوسف حسن ', icon: 'https://api.multiavatar.com/76d730110bb25b52e5.svg'},
             '66908': { name: 'احمد محمد عبداللطيف', icon: 'https://api.multiavatar.com/c91bc1e60640f2bd7a.svg'},
             '69756': { name: 'احمد ياسر', icon: 'https://api.multiavatar.com/e60abda884983d5404.svg'},
+            '25654': { name: 'اسلام محمد شعراوي ', icon: 'https://api.multiavatar.com/3a565be8bfd4e264e4.svg'},
             '70126': { name: 'مازن محمد', icon: 'https://api.multiavatar.com/988a824d7b64800149.svg'},
             '16840': { name: 'سما ابراهيم', icon: 'https://api.multiavatar.com/e736fdd76d2f8bb555.svg'},
             '15032': { name: 'تسنيم محمد', icon: 'https://api.multiavatar.com/1eae35ecc479f6edd1.svg'},
