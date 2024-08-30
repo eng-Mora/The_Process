@@ -407,6 +407,7 @@
         const userDetails = {
             'mora mo': { name: 'administrator', icon: 'https://i.ibb.co/7KQqmM3/download.png'},
             
+            '25695': { name: 'فيرا عصام عدلي', icon: 'https://api.multiavatar.com/2969b18bac7b3cec76.svg'},
             '50808': { name: 'احمد حسين', icon: 'https://api.multiavatar.com/390264ffe38ec2ed41.svg'},
             '84536': { name: 'زياد خالد', icon: 'https://api.multiavatar.com/4a955a93363ada217b.svg'},
             '41596': { name: 'نورالدين هيثم', icon: 'https://api.multiavatar.com/cbfb555bf65d9c5b93.svg'},
