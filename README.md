@@ -362,6 +362,8 @@
             <ul>
                 <li onclick="showVideo('video1')">حل واجب حصة 1 </li>
                 <li onclick="showVideo('video2')">حل واجب حصة 2</li>
+                <li onclick="showVideo('video3')">حل واجب حصة 3</li>
+
 
             </ul>
         </div>
@@ -378,7 +380,16 @@
             </div>
             <iframe src="https://drive.google.com/file/d/1Qb7N0TRJ8Cj4gkZ2nK9ZhSgAp7NC6636/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
+<div id="video3" class="video-container hidden">
+            <h1 class="video-title">(part1) حل واجب حصة 3</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1Tf4neobTgDj7nXd9WoUXwNYMLJC-7FJE/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div> 
+            <h1 class="video-title">(part2)</h1>
+          <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1nHPcJfPX1cuC_Quy52RqciSkQZ1UWBdx/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+          
+            <h1 class="video-title">الاجابات</h1>
 
+           <iframe src="https://drive.google.com/file/d/13xgvtm1WuqO5FdtAp9kE7QaOPKQ5BXAA/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
