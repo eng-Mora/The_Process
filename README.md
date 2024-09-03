@@ -392,10 +392,10 @@
            <iframe src="https://drive.google.com/file/d/13xgvtm1WuqO5FdtAp9kE7QaOPKQ5BXAA/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
 <div id="video4" class="video-container hidden">
-            <h1 class="video-title">شرح حصة 3 (سنتر) (part 1)</h1>
+            <h1 class="video-title">شرح حصة 3 (part 1)</h1>
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1K23MDswnSetWJRpvkhgbdzAF9HEp6syq/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
 
-      <h1 class="video-title">شرح حصة 3 (سنتر) (part 2)</h1>
+      <h1 class="video-title">شرح حصة 3 (part 2)</h1>
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1f0f8Q3hTneh5tnT1piVaIe4xE8EceBHg/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
 </div>
 </div>
