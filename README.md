@@ -457,7 +457,7 @@
             '21428o': { name: 'محمد احمد', icon: 'https://api.multiavatar.com/Guadalajara.svg'},
             '20608o': { name: 'زياد احمد', icon: 'https://api.multiavatar.com/4db29acccc604fe610.svg'},
            '48392o': { name: 'عمار اشرف', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
-            '69897o': { name: 'اروى احمد', icon: 'https://api.multiavatar.com/e71c17c25671802202.svg'},
+            '69897': { name: 'اروى احمد', icon: 'https://api.multiavatar.com/e71c17c25671802202.svg'},
             '82128o': { name: 'زياد إيهاب', icon: 'https://api.multiavatar.com/f84f24bcc7b72eebf0.svg'},
            '89303o': { name: 'حمدي محمد ', icon: 'https://api.multiavatar.com/9b840c355db11594e1.svg' },
             '80546o': { name: 'مازن احمد ', icon: 'https://api.multiavatar.com/94a0dd6577ca3c7291.svg' },
