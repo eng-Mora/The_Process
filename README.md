@@ -359,46 +359,70 @@
         <h2 id="video-heading">The Process platform</h2>
         <button class="menu-button" onclick="document.getElementById('video-menu').classList.toggle('hidden')">Select Video</button>
         <div id="video-menu" class="menu-content hidden">
-            <ul>
-                <li onclick="showVideo('video1')">حل واجب حصة 1 </li>
-                <li onclick="showVideo('video2')">حل واجب حصة 2</li>
-                <li onclick="showVideo('video3')">حل واجب حصة 3</li>
-                <li onclick="showVideo('video4')">شرح حصة 3 (سنتر)</li>
+           <ul>
+    <li onclick="showVideo('video1')">حل واجب حصة 1</li>
+    <li onclick="showVideo('video2')">حل واجب حصة 2</li>
+    <li onclick="showVideo('video3')">حل واجب حصة 3</li>
+    <li onclick="showVideo('video4')">شرح حصة 3 (سنتر)</li>
+    <li onclick="showVideo('video5')">حل واجب حصة 4</li>
+</ul>
 
+<div id="video1" class="video-container hidden">
+    <h1 class="video-title">حل واجب حصة 1</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1iiNJqMrDUKkTptUQVymPbMqEyf0UowBB/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
 
-            </ul>
-        </div>
-        <div id="video1" class="video-container hidden">
-            <h1 class="video-title">حل واجب حصة 1</h1>
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-                <iframe src="https://drive.google.com/file/d/1iiNJqMrDUKkTptUQVymPbMqEyf0UowBB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-            </div>
-            <iframe src="https://drive.google.com/file/d/1L5UPraDEgW_Kmh32eOaOU5uYK8UqER4V/preview" width="640" height="480" allow="autoplay"></iframe>
-        </div>
-        <div id="video2" class="video-container hidden">
-            <h1 class="video-title">حل واجب حصة 2</h1>
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1kv5eqpNmC_X2ByBbfoLcXn6WUnA0eYVB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-            </div>
-            <iframe src="https://drive.google.com/file/d/1Qb7N0TRJ8Cj4gkZ2nK9ZhSgAp7NC6636/preview" width="640" height="480" allow="autoplay"></iframe>
-            </div>
+<div id="video2" class="video-container hidden">
+    <h1 class="video-title">حل واجب حصة 2</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1kv5eqpNmC_X2ByBbfoLcXn6WUnA0eYVB/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <iframe src="https://drive.google.com/file/d/1Qb7N0TRJ8Cj4gkZ2nK9ZhSgAp7NC6636/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+
 <div id="video3" class="video-container hidden">
-            <h1 class="video-title">(part1) حل واجب حصة 3</h1>
-            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1Tf4neobTgDj7nXd9WoUXwNYMLJC-7FJE/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div> 
-            <h1 class="video-title">(part2)</h1>
-          <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1nHPcJfPX1cuC_Quy52RqciSkQZ1UWBdx/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
-          
-            <h1 class="video-title">الاجابات</h1>
+    <h1 class="video-title">(part1) حل واجب حصة 3</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1Tf4neobTgDj7nXd9WoUXwNYMLJC-7FJE/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <h1 class="video-title">(part2)</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1nHPcJfPX1cuC_Quy52RqciSkQZ1UWBdx/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <h1 class="video-title">الاجابات</h1>
+    <iframe src="https://drive.google.com/file/d/13xgvtm1WuqO5FdtAp9kE7QaOPKQ5BXAA/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
 
-           <iframe src="https://drive.google.com/file/d/13xgvtm1WuqO5FdtAp9kE7QaOPKQ5BXAA/preview" width="640" height="480" allow="autoplay"></iframe>
-            </div>
 <div id="video4" class="video-container hidden">
-            <h1 class="video-title">شرح حصة 3 (part 1)</h1>
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1K23MDswnSetWJRpvkhgbdzAF9HEp6syq/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+    <h1 class="video-title">شرح حصة 3 (part 1)</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1K23MDswnSetWJRpvkhgbdzAF9HEp6syq/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <h1 class="video-title">شرح حصة 3 (part 2)</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1f0f8Q3hTneh5tnT1piVaIe4xE8EceBHg/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+</div>
 
-      <h1 class="video-title">شرح حصة 3 (part 2)</h1>
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1f0f8Q3hTneh5tnT1piVaIe4xE8EceBHg/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+<div id="video5" class="video-container hidden">
+    <h1 class="video-title">(part1) حل واجب حصة 4</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1E_gyIwo2S8t_T5_4Q1XcTvekpPGlXQwg/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <h1 class="video-title">(part2) حل واجب حصة 4</h1>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://drive.google.com/file/d/1JAJoaikg02O7DkbDu3317lMkbjEB_b9I/preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+    </div>
+    <h1 class="video-title">الاجابات</h1>
+    <iframe src="https://drive.google.com/file/d/1B9mwnM9Zl_k6l_qgUsLc2A16IoaBe4yz/preview" width="640" height="480" allow="autoplay"></iframe>
 </div>
+
+
 </div>
+
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
