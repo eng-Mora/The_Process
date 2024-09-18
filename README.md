@@ -431,6 +431,8 @@
 <h1 class="video-title">حل واجب حصة 5 (part 2)
 </h1>  <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1VWTzWJ8il2QNceP29XdzYdTEXDL8wYUj/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
  </div>
+             <h1 class="video-title">الاجابات</h1>
+
 <iframe src="https://drive.google.com/file/d/1JjdpQ3-YY9JcR4PIFD6qFRCiE7skqFKQ/preview" width="640" height="480" allow="autoplay"></iframe>
  </div>
 
