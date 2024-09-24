@@ -366,6 +366,10 @@
                 <li onclick="showVideo('video4')">شرح حصة 3 (سنتر)</li>
                 <li onclick="showVideo('video5')">حل واجب حصة 4</li>
                 <li onclick="showVideo('video6')">حل واجب حصة 5</li>
+                <li onclick="showVideo('video7')">lecture 1 exercises</li>
+                <li onclick="showVideo('video8')">lecture 2 exercises</li>
+                <li onclick="showVideo('video9')">lecture 3 exercises</li>
+                <li onclick="showVideo('video10')">lecture 4 exercises</li>
 
 
             </ul>
@@ -435,7 +439,34 @@
 
 <iframe src="https://drive.google.com/file/d/1JjdpQ3-YY9JcR4PIFD6qFRCiE7skqFKQ/preview" width="640" height="480" allow="autoplay"></iframe>
  </div>
+ 
+<div id="video7" class="video-container hidden">
+    <h1 class="video-title">lecture 1 exercises</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1MGm9pT1T2Wme-MO9iMe-b7sKpYvcj3Gw/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+        </div>
 
+<div id="video8" class="video-container hidden">
+    <h1 class="video-title">part 1</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/13L0ifCf-T6YGnpCwavxXPB-RVbVHmg8P/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+    <h1 class="video-title">part 2</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1PSEE0hTo8j8sKnyiA7n7L5th61yxb7yj/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+    <h1 class="video-title">part 3</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1dKYEF4dDpvMqNJ_mCLGpPDSholq7R5Rm/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+    </div>
+<div id="video9" class="video-container hidden">
+    <h1 class="video-title">lecture 3 exercises</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1_hfwKKYNdY6J3wgDQS9vJqbYpQ_g6n45/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+    </div>
+<div id="video10" class="video-container hidden">
+    <h1 class="video-title">part 1</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1hqTGYDwSqnWtFqKUfZVr4mLWXVAtMzCy/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+    <h1 class="video-title">part 2</h1>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1ccLtf7KaafkEQTxzgIYIBfMn7Jhwyb3d/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+    </div>
+    </div>
 
 
 
