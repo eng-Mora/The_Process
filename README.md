@@ -262,12 +262,15 @@
     }
 
     .menu-content {
-        background-color: #2c2c2c;
-        color: white;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+    background-color: #8c4aad;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Set the maximum height of the menu */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
 
     .menu-button {
         background-color: #4CAF50;
@@ -320,7 +323,6 @@
         height: 50px;
         margin-right: 15px;
     }
-
 
     .user-info p {
         margin: 0;
@@ -447,11 +449,13 @@
         </div>
 
 <div id="video8" class="video-container hidden">
-    <h1 class="video-title">part 1</h1>
+    <h1 class="video-title">lecture 2 exercises</h1>
+
+    <h1 class="video-title">    part 1     </h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/13L0ifCf-T6YGnpCwavxXPB-RVbVHmg8P/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
-    <h1 class="video-title">part 2</h1>
+    <h1 class="video-title">       part 2          </h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1PSEE0hTo8j8sKnyiA7n7L5th61yxb7yj/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
-    <h1 class="video-title">part 3</h1>
+    <h1 class="video-title">        part 3         </h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1dKYEF4dDpvMqNJ_mCLGpPDSholq7R5Rm/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
     </div>
     </div>
@@ -461,6 +465,8 @@
     </div>
     </div>
 <div id="video10" class="video-container hidden">
+    <h1 class="video-title">lecture 4 exercises</h1>
+
     <h1 class="video-title">part 1</h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1hqTGYDwSqnWtFqKUfZVr4mLWXVAtMzCy/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
     <h1 class="video-title">part 2</h1>
