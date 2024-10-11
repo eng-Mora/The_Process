@@ -372,6 +372,8 @@
                 <li onclick="showVideo('video8')">lecture 2 exercises</li>
                 <li onclick="showVideo('video9')">lecture 3 exercises</li>
                 <li onclick="showVideo('video10')">lecture 4 exercises</li>
+                <li onclick="showVideo('video11')">حل واجب حصة 6</li>
+
 
 
             </ul>
@@ -446,8 +448,7 @@
     <h1 class="video-title">lecture 1 exercises</h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1MGm9pT1T2Wme-MO9iMe-b7sKpYvcj3Gw/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
     </div>
-        </div>
-
+    </div>
 <div id="video8" class="video-container hidden">
     <h1 class="video-title">lecture 2 exercises</h1>
 
@@ -466,15 +467,18 @@
     </div>
 <div id="video10" class="video-container hidden">
     <h1 class="video-title">lecture 4 exercises</h1>
-
     <h1 class="video-title">part 1</h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1hqTGYDwSqnWtFqKUfZVr4mLWXVAtMzCy/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
     <h1 class="video-title">part 2</h1>
     <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1ccLtf7KaafkEQTxzgIYIBfMn7Jhwyb3d/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
     </div>
     </div>
-
-
+<div id="video11" class="video-container hidden">
+            <h1 class="video-title"> حل واجب حصة 6</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1V34aIAOPGhUdRksC7kgEQ8l0s8u1NLhK/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+             <h1 class="video-title">الاجابات</h1>
+<iframe src="https://drive.google.com/file/d/1bN0w4hN1q92ukBL2N0_4RluI5As7aBiW/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
