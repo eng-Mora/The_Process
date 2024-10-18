@@ -373,6 +373,7 @@
                 <li onclick="showVideo('video9')">lecture 3 exercises</li>
                 <li onclick="showVideo('video10')">lecture 4 exercises</li>
                 <li onclick="showVideo('video11')">حل واجب حصة 6</li>
+                <li onclick="showVideo('video12')">حل واجب حصة 7</li>
 
 
 
@@ -479,6 +480,17 @@
              <h1 class="video-title">الاجابات</h1>
 <iframe src="https://drive.google.com/file/d/1bN0w4hN1q92ukBL2N0_4RluI5As7aBiW/preview" width="640" height="480" allow="autoplay"></iframe>
     </div>
+           <div id="video12" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 7 (part 1)</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/14YFJTqTwknrrSuBAJKzWgI4k3d63omkK/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title"> (part 2)</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1abKZL-6MOzBIhGAso84HrkwWTgFNPDd-/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title"> (part 3)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/16b6LqFdMhUW4JtC_JmXpzgk-_0SFt80y/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+             <h1 class="video-title">الاجابات</h1>
+<iframe src="https://drive.google.com/file/d/1sjiK-D-vn9evR84D9cJ7CMoBaU-nzz2z/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
