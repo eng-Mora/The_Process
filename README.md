@@ -591,6 +591,8 @@
             '94452': { name: 'دنيا كمال', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg'},
             '22030': { name: 'حبيبه احمد عبدالرؤوف', icon: 'https://api.multiavatar.com/098db318e1715a48dd.svg'},
             '68450': { name: 'ملك اشرف', icon: 'https://api.multiavatar.com/12de69a625c83e5ca8.svg'},
+            '06764': { name: 'زينب محمد على', icon: 'https://api.multiavatar.com/12de69a625c83e5ca8.svg'},
+            '95464': { name: 'عمرو طارق', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
 
                      
             '97510': { name: 'مهند خالد عبدالفتاح', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
