@@ -602,6 +602,7 @@
             '06764': { name: 'زينب محمد على', icon: 'https://api.multiavatar.com/12de69a625c83e5ca8.svg'},
             '95464': { name: 'عمرو طارق', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
 
+            '92758': { name: 'مازن عبدالوهاب', icon: 'https://api.multiavatar.com/f4fd82c786f12ce4c0.svg'},
                      
             '97510': { name: 'مهند خالد عبدالفتاح', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
             '41729': { name: 'مؤمن ايهاب فؤاد', icon: 'https://api.multiavatar.com/f1e1a5a8905966f75e.svg'},
