@@ -376,6 +376,7 @@
                 <li onclick="showVideo('video12')">حل واجب حصة 7</li>
                 <li onclick="showVideo('video13')">حل واجب حصة 8</li>
                 <li onclick="showVideo('video14')">حل واجب حصة 9</li>
+                <li onclick="showVideo('video15')">حل واجب حصة10</li>
 
 
 
@@ -510,6 +511,17 @@
              <h1 class="video-title">الاجابات</h1>
 <iframe src="https://drive.google.com/file/d/1OyhK-zJZ4BGafDeZzrE3AOB-qHGaitYn/preview" width="640" height="480" allow="autoplay"></iframe>
 </div>
+
+<div id="video15" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 10 (part 1)</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1TCtZ7qxH-mOzrFLkCrI8peKhF6SPnk9d/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title">حل واجب حصة 10 (part 2)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1E8yhjJ-b0D2wm-0IR6v54GPxQfYHrbGQ/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+             <h1 class="video-title">الاجابات</h1>
+<iframe src="https://drive.google.com/file/d/1nugUrE7M23qVk3y_sp4eNvAyzmLVUgjH/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
