@@ -379,6 +379,7 @@
                 <li onclick="showVideo('video15')">حل واجب حصة10</li>
                 <li onclick="showVideo('video16')">حل واجب حصة11</li>
                 <li onclick="showVideo('video17')">حل واجب حصة 12</li>
+                <li onclick="showVideo('video18')">حل واجب حصة 15</li>
 
 
 
@@ -539,8 +540,20 @@
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1P8QDspeIW6rc5ciD5GXSNu2hErRsz55L/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
             <h1 class="video-title">حل واجب حصة 12 (part 2)</h1>
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1q9eGKbtTZGuzqPGeLwgRZZtWGTkNEAjr/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
-             <h1 class="video-title">Answers</h1>
+            <h1 class="video-title">حل واجب حصة 12 (part 1)</h1>
 <iframe src="https://drive.google.com/file/d/1rGc_5pkLjnaDM3CCZwXR-Pzgsb0JFcZ2/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+<div id="video18" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 15 (part 1)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1Do8m1xQ-tEn7U4_5xAtKNjZ2VOHiw5xU/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+            <h1 class="video-title">حل واجب حصة 15 (part 2)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1JQV3sNeHpJswUg0ebNniRR9CcwO3VTWC/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+            <h1 class="video-title">حل واجب حصة 15 (part 3)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1FRCVhqYZlRqCLw9XLiEpaPCSlKc22Kzn/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+             <h1 class="video-title">Answers</h1>
+<iframe src="https://drive.google.com/file/d/1StpthZHyd_pxX8Znd8jCIGeeYsdcPoXe/preview" width="640" height="480" allow="autoplay"></iframe>
 </div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
@@ -607,10 +620,10 @@
             '53336o': { name: 'مريم اشرف', icon: 'https://api.multiavatar.com/2969b18bac7b3cec76.svg'},
             '48389': { name: 'سندس صلاح', icon: 'https://api.multiavatar.com/36aa46f54891ced0b5.svg'},
             '28354o': { name: 'مريم احمد', icon: 'https://api.multiavatar.com/cd15833a17efc52a72.svg'},
-            '75539o': { name: 'جنى طارق', icon: 'https://api.multiavatar.com/eb9203245d22ab2c3f.svg'},
+            '75539': { name: 'جنى طارق', icon: 'https://api.multiavatar.com/eb9203245d22ab2c3f.svg'},
             '58951o': { name: 'سارة عماد', icon: 'https://api.multiavatar.com/9447fc5ea452de05be.svg'},
             '89089o': { name: 'جنة محمد', icon: 'https://api.multiavatar.com/9359ac6f0b88e61eb6.svg'},
-            '41292o': { name: 'مريم سعيد', icon: 'https://api.multiavatar.com/2947fd65b9978407f2.svg'},
+            '41292': { name: 'مريم سعيد', icon: 'https://api.multiavatar.com/2947fd65b9978407f2.svg'},
             '32532': { name: 'مريم عاطف', icon: 'https://api.multiavatar.com/f90923036c611bd66d.svg'},
             '30223o': { name: 'سيف الدين تامر', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg'},
             '20608o': { name: 'زياد احمد', icon: 'https://api.multiavatar.com/4db29acccc604fe610.svg'},
@@ -635,7 +648,7 @@
             '97510o': { name: 'مهند خالد عبدالفتاح', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
             '41729': { name: 'مؤمن ايهاب فؤاد', icon: 'https://api.multiavatar.com/f1e1a5a8905966f75e.svg'},
             '15290': { name: 'محمد عمرو عبدالوهاب', icon: 'https://api.multiavatar.com/19e5045f1a5f9b62e1.svg'},
-            '04596o': { name: 'احمد سامح سعيد', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
+            '04596': { name: 'احمد سامح سعيد', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
             '08724': { name: 'عبدالوهاب عبدالرحمن السيد', icon: 'https://api.multiavatar.com/234e2181c7d72e4201.svg'},
             '19734': { name: 'كريم عبدالمنعم', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '56302': { name: 'ياسين محمد اسامه', icon: 'https://api.multiavatar.com/5160ab1a42287f8bde.svg'},
