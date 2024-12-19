@@ -380,6 +380,7 @@
                 <li onclick="showVideo('video16')">حل واجب حصة11</li>
                 <li onclick="showVideo('video17')">حل واجب حصة 12</li>
                 <li onclick="showVideo('video18')">حل واجب حصة 15</li>
+                <li onclick="showVideo('video19')">حل واجب حصة 16</li>
 
 
 
@@ -555,7 +556,17 @@
              <h1 class="video-title">Answers</h1>
 <iframe src="https://drive.google.com/file/d/1StpthZHyd_pxX8Znd8jCIGeeYsdcPoXe/preview" width="640" height="480" allow="autoplay"></iframe>
 </div>
-
+<div id="video19" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 16 (part 1)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1zgNhFXQY7pO6fbNFBVh_ClAfG5P12J0O/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title">حل واجب حصة 16 (part 2)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1EEKW1SvwYJDpFfWzfay2hCushhiXUP1v/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+            <h1 class="video-title">حل واجب حصة 16 (part 3)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1NUJF2103h1BTxWlhtVUuhZsUwraul30M/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+             <h1 class="video-title">Answers</h1>
+<iframe src="https://drive.google.com/file/d/1Fo2A56VlE0SuhmVKQxWoG1LJzjRRIKZA/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
