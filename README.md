@@ -678,6 +678,8 @@
             '81376': { name: 'محمود طارق محروس', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '64159': { name: 'زياد محمد رمضان', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '75183': { name: 'معاذ عيسى محمد عيسى', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
+            
+            '68294': { name: 'يسري محمد', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
 
             
             
