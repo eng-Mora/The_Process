@@ -704,6 +704,8 @@
             '57429': { name: 'باسل محمد العرابي', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '62831': { name: 'عبدالرحمن مصطفى', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
             '31957': { name: 'عبدالكريم مدحت', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
+            '64743': { name: 'محمد صلاح احمد', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
+            '43198': { name: 'محمد احمد سلامه', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
 
             
             
