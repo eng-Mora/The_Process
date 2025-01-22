@@ -741,8 +741,7 @@
             userIcon.src = userDetail.icon;  // Set user's icon
             userName.textContent = userDetail.name;  // Set user's name
 
-            // إذا كان المستخدم هو "2526" أضف العنصر الجديد إلى القائمة
-            if (['admin.mora', '99', '11'].includes(username)) {
+            if (['admin.mora', '99', '16840 ', '28411', '15032'].includes(username)) {
                 const examItem = document.createElement('li');
                 examItem.textContent = 'حل الامتحان';
                 examItem.onclick = () => showVideo('examVideo');
