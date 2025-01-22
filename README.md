@@ -741,7 +741,7 @@
             userIcon.src = userDetail.icon;  // Set user's icon
             userName.textContent = userDetail.name;  // Set user's name
 
-            if (['admin.mora', '99', '16840', '28411', '15032'].includes(username)) {
+            if (['admin.mora', '99', '16840', '28411', '15032', '41596'].includes(username)) {
                 const examItem = document.createElement('li');
                 examItem.textContent = 'Exam Answer Ch.3';
                 examItem.onclick = () => showVideo('examVideo');
