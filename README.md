@@ -387,11 +387,11 @@
 
             </ul>
         </div>
-        <!-- أضف هذا القسم الخاص بفيديو حل الامتحان -->
 <div id="examVideo" class="video-container hidden">
     <h1 class="video-title">حل الامتحان</h1>
-    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1kv5eqpNmC_X2ByBbfoLcXn6WUnA0eYVB/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-</div>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1lVnm7PtWwWR6EVlMaod65E7EZ3iTy-ET/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+        <h1 class="video-title">حل الامتحان</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1KupJUYCbdJQWeJhXop9np4u9i2OlHcTu/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
 </div>
         <div id="video5" class="video-container hidden">
     <h1 class="video-title">(part1) حل واجب حصة 4</h1>
