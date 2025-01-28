@@ -732,6 +732,7 @@
             '75183o': { name: 'معاذ عيسى محمد عيسى', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
             '68294o': { name: 'يسري محمد', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '48273': { name: 'احمد حسن توفيق', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
+            '75014': { name: 'نورا احمد مصطفى', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg'},
             '19385': { name: 'عمر جلال العرابي', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '57429': { name: 'باسل محمد العرابي', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '62831': { name: 'عبدالرحمن مصطفى', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
