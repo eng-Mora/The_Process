@@ -385,6 +385,7 @@
                 <li onclick="showVideo('video21')">حل واجب حصة 18</li>
                 <li onclick="showVideo('video22')">حل واجب حصة 19</li>
                 <li onclick="showVideo('video23')">حل واجب حصة 20</li>
+                <li onclick="showVideo('video24')">حل واجب حصة 21</li>
 
 
             </ul>
@@ -615,20 +616,13 @@
                          <h1 class="video-title">Answers</h1>
 <iframe src="https://drive.google.com/file/d/1xg4ZWnxS3KrsP5Xnh7vzxUjOT4F5hsG5/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="video24" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 21 (part 1)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1ML0Ozo7x3NYXXhnZbRV6itHm7hGUOrbN/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title">حل واجب حصة 21 (part 2)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1yek5zJkraHP5ga4LNsaM_q3ikU609JNT/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+</div>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
