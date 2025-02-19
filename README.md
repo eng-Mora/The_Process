@@ -386,6 +386,7 @@
                 <li onclick="showVideo('video22')">حل واجب حصة 19</li>
                 <li onclick="showVideo('video23')">حل واجب حصة 20</li>
                 <li onclick="showVideo('video24')">حل واجب حصة 21</li>
+                <li onclick="showVideo('video25')">حل واجب حصة 22</li>
 
 
             </ul>
