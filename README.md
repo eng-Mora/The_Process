@@ -622,6 +622,13 @@
             <h1 class="video-title">حل واجب حصة 21 (part 2)</h1>
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/175p9bR3nWoe1Cy_2geVOe0V_txYlD9bF/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
 </div>
+<div id="video25" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 22 </h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1szxRjQtJkL_zgbrRzo0x7ApD44mqIWt1/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+                         <h1 class="video-title">Answers</h1>
+<iframe src="https://drive.google.com/file/d/1dgNOmiexyY2XGyHBzDB3dVO2XRZimrYm/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
@@ -732,6 +739,8 @@
             '31957': { name: 'عبدالكريم مدحت', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '64743': { name: 'محمد صلاح احمد', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '43198': { name: 'محمد احمد سلامه', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
+            '34118': { name: 'علي محمد تامر', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
+            
             '99': { name: 'Teto', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg' }
         };
 
