@@ -741,6 +741,10 @@
             '64743': { name: 'محمد صلاح احمد', icon: 'https://api.multiavatar.com/c8313188a97258e27c.svg'},
             '43198': { name: 'محمد احمد سلامه', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
             '34118': { name: 'علي محمد تامر', icon: 'https://api.multiavatar.com/f2d71bd78f373f11c4.svg'},
+            '59112': { name: 'بسنت صبحي حلمي', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg'},
+            '73681': { name: 'سلمى حسام فوزي', icon: 'https://api.multiavatar.com/20ba7ccc9a755d9743.svg'},
+            
+            
             
             '99': { name: 'Teto', icon: 'https://api.multiavatar.com/7995823da6025e8a33.svg' }
         };
