@@ -387,6 +387,7 @@
                 <li onclick="showVideo('video23')">حل واجب حصة 20</li>
                 <li onclick="showVideo('video24')">حل واجب حصة 21</li>
                 <li onclick="showVideo('video25')">حل واجب حصة 22</li>
+                <li onclick="showVideo('video26')">حل واجب حصة 23</li>
 
 
             </ul>
@@ -628,6 +629,15 @@
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1szxRjQtJkL_zgbrRzo0x7ApD44mqIWt1/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
                          <h1 class="video-title">Answers</h1>
 <iframe src="https://drive.google.com/file/d/1dgNOmiexyY2XGyHBzDB3dVO2XRZimrYm/preview" width="640" height="480" allow="autoplay"></iframe>
+</div>
+<div id="video26" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 23 (part 1)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1dPPVHDKJS7B6hKNymmCtmqHftbB32UT7/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title">حل واجب حصة 23 (part 2)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/13ohVOQYs6khXOS2w-Rd-qWiMjqSRZ7No/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title">حل واجب حصة 23 (part 3)</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1v_fUd5-zus9a8j8IpRbxJqjiOxgvfyAD/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
 </div>
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
