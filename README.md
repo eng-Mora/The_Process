@@ -393,6 +393,7 @@
                 <li onclick="showVideo('video29')">حل واجب حصة 26</li>
                 <li onclick="showVideo('video30')">حل واجب حصة 27</li>
                 <li onclick="showVideo('video31')">حل واجب حصة 28</li>
+                <li onclick="showVideo('video32')">حل واجب حصة 29</li>
 
             </ul>
         </div>
@@ -676,7 +677,15 @@
 </div>
 </div>
 
-
+<div id="video32" class="video-container hidden">
+            <h1 class="video-title">حل واجب حصة 29 </h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+    <iframe src="https://drive.google.com/file/d/1wN9zR29CG_1o4RqdwL5B4Ud0O740crIr/preview" 
+        style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" 
+        allowfullscreen scrolling="no" allow="encrypted-media;">
+    </iframe>
+</div>
+</div>
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
