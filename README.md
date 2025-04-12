@@ -394,6 +394,7 @@
                 <li onclick="showVideo('video30')">حل واجب حصة 27</li>
                 <li onclick="showVideo('video31')">حل واجب حصة 28</li>
                 <li onclick="showVideo('video32')">حل واجب حصة 29</li>
+                <li onclick="showVideo('video33')">كتاب التفوق شابتر 8</li>
 
             </ul>
         </div>
@@ -686,6 +687,16 @@
     </iframe>
 </div>
 </div>
+
+<div id="video33" class="video-container hidden">
+            <h1 class="video-title">chapter 8 part.1</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/15X0ySbg7WH7PUdenVnK-ToUmCjNd4XRr/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+            <h1 class="video-title">chapter 8 part.2</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1VoN2MVwbMhZUEgEWFf2adJsNt_5eq7c_/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
+</div>
+</div>
+
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
             <a href="https://www.facebook.com/mamro8529?mibextid=ZbWKwL" title="Facebook">
