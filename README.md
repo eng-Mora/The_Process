@@ -395,6 +395,7 @@
                 <li onclick="showVideo('video31')">حل واجب حصة 28</li>
                 <li onclick="showVideo('video32')">حل واجب حصة 29</li>
                 <li onclick="showVideo('video33')">كتاب التفوق شابتر 8</li>
+                <li onclick="showVideo('video34')">final exam 2021 second session</li>
 
             </ul>
         </div>
@@ -696,6 +697,23 @@
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1VoN2MVwbMhZUEgEWFf2adJsNt_5eq7c_/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
 </div>
 </div>
+<div id="video34" class="video-container hidden">
+            <h1 class="video-title">final exam 2021 second session</h1>
+            <h1 class="video-title"> part.1</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1rVU6cxjySIZcXF2XatgsY3EjSSsr4oVy/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title"> part.2</h1>
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/10mGHNDlO0ZdYQeW2LHOyf3Yxf7sCNuSX/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+            <h1 class="video-title"> part.3</h1>
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://drive.google.com/file/d/1ptQQwsPbytIUuu3vTtWsf-AgRhU0QUjy/preview" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+</div>
+
+
+
+
+
+
+
+
 
         <p class="contact-message">لو واجهتك مشكلة ابعتلي</p>
         <div class="contact-icons">
